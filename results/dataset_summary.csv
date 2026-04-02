@@ -1,0 +1,3 @@
+Dataset,Total Samples,Normal,Fraud,Fraud %,Features (original),Features (engineered),Source
+Credit Card,283726,283253,473,0.1667,31,31,"Реальные данные (Kaggle, ULB)"
+PaySim,500000,491787,8213,1.6426,11,11,Синтетическая симуляция
