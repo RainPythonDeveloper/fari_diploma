@@ -1,0 +1,1 @@
+{"name": "PaySim", "total_samples": 500000, "normal": 491787, "fraud": 8213, "fraud_rate": 1.6426, "features_count": 11, "test_samples": 106571, "test_fraud": 8213, "contamination": 0.0164}

@@ -1,0 +1,1 @@
+{"Ensemble": {"tn": 56582, "fp": 69, "fn": 73, "tp": 400}, "XGBoost": {"tn": 56627, "fp": 24, "fn": 76, "tp": 397}, "Isolation Forest": {"tn": 56562, "fp": 89, "fn": 230, "tp": 243}, "Autoencoder": {"tn": 56556, "fp": 95, "fn": 106, "tp": 367}}
