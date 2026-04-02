@@ -1,3 +1,18 @@
 # Large CSV files
 PS_20174392719_1491204439457_log.csv
 creditcard.csv
+
+# Model artifacts (large binary files)
+models/*.pkl
+models/*.json
+models/*.onnx
+models/*.keras
+
+# Node
+frontend/node_modules/
+frontend/.next/
+
+# Environment
+.env*.local
+__pycache__/
+*.pyc
