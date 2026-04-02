@@ -1,1 +1,7502 @@
-[{"index": 0, "is_fraud": 0, "amount": 10.0, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 1, "is_fraud": 0, "amount": 60.5, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 2, "is_fraud": 1, "amount": 111.0, "scores": {"Ensemble": 0.9, "XGBoost": 0.95, "Isolation Forest": 0.7, "Autoencoder": 0.8}, "ensemble_prediction": 1}, {"index": 3, "is_fraud": 0, "amount": 161.5, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 4, "is_fraud": 0, "amount": 212.0, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 5, "is_fraud": 1, "amount": 262.5, "scores": {"Ensemble": 0.9, "XGBoost": 0.95, "Isolation Forest": 0.7, "Autoencoder": 0.8}, "ensemble_prediction": 1}, {"index": 6, "is_fraud": 0, "amount": 313.0, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 7, "is_fraud": 0, "amount": 363.5, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 8, "is_fraud": 1, "amount": 414.0, "scores": {"Ensemble": 0.9, "XGBoost": 0.95, "Isolation Forest": 0.7, "Autoencoder": 0.8}, "ensemble_prediction": 1}, {"index": 9, "is_fraud": 0, "amount": 464.5, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 10, "is_fraud": 0, "amount": 515.0, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 11, "is_fraud": 1, "amount": 565.5, "scores": {"Ensemble": 0.9, "XGBoost": 0.95, "Isolation Forest": 0.7, "Autoencoder": 0.8}, "ensemble_prediction": 1}, {"index": 12, "is_fraud": 0, "amount": 616.0, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 13, "is_fraud": 0, "amount": 666.5, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 14, "is_fraud": 1, "amount": 717.0, "scores": {"Ensemble": 0.9, "XGBoost": 0.95, "Isolation Forest": 0.7, "Autoencoder": 0.8}, "ensemble_prediction": 1}, {"index": 15, "is_fraud": 0, "amount": 767.5, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 16, "is_fraud": 0, "amount": 818.0, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 17, "is_fraud": 1, "amount": 868.5, "scores": {"Ensemble": 0.9, "XGBoost": 0.95, "Isolation Forest": 0.7, "Autoencoder": 0.8}, "ensemble_prediction": 1}, {"index": 18, "is_fraud": 0, "amount": 919.0, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}, {"index": 19, "is_fraud": 0, "amount": 969.5, "scores": {"Ensemble": 0.05, "XGBoost": 0.03, "Isolation Forest": 0.06, "Autoencoder": 0.04}, "ensemble_prediction": 0}]
+[
+  {
+    "index": 0,
+    "tx_id": "TXN-CC-00001",
+    "timestamp": "2024-09-01 08:12:37",
+    "is_fraud": 0,
+    "amount": 566.54,
+    "scores": {
+      "Ensemble": 0.3,
+      "XGBoost": 0.32,
+      "Isolation Forest": 0.46,
+      "Autoencoder": 0.4
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 1,
+    "tx_id": "TXN-CC-00002",
+    "timestamp": "2024-09-01 09:07:12",
+    "is_fraud": 0,
+    "amount": 359.3,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 2,
+    "tx_id": "TXN-CC-00003",
+    "timestamp": "2024-09-01 11:24:05",
+    "is_fraud": 0,
+    "amount": 188.95,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 3,
+    "tx_id": "TXN-CC-00004",
+    "timestamp": "2024-09-01 11:56:47",
+    "is_fraud": 0,
+    "amount": 491.77,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 4,
+    "tx_id": "TXN-CC-00005",
+    "timestamp": "2024-09-01 12:46:52",
+    "is_fraud": 0,
+    "amount": 372.89,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 5,
+    "tx_id": "TXN-CC-00006",
+    "timestamp": "2024-09-01 14:18:56",
+    "is_fraud": 0,
+    "amount": 467.27,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 6,
+    "tx_id": "TXN-CC-00007",
+    "timestamp": "2024-09-01 15:55:50",
+    "is_fraud": 0,
+    "amount": 251.62,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 7,
+    "tx_id": "TXN-CC-00008",
+    "timestamp": "2024-09-01 16:05:20",
+    "is_fraud": 0,
+    "amount": 409.86,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 8,
+    "tx_id": "TXN-CC-00009",
+    "timestamp": "2024-09-01 17:19:07",
+    "is_fraud": 0,
+    "amount": 512.7,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 9,
+    "tx_id": "TXN-CC-00010",
+    "timestamp": "2024-09-01 17:41:04",
+    "is_fraud": 0,
+    "amount": 140.76,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 10,
+    "tx_id": "TXN-CC-00011",
+    "timestamp": "2024-09-01 19:29:20",
+    "is_fraud": 0,
+    "amount": 1507.33,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 11,
+    "tx_id": "TXN-CC-00012",
+    "timestamp": "2024-09-01 21:12:58",
+    "is_fraud": 0,
+    "amount": 429.47,
+    "scores": {
+      "Ensemble": 0.29,
+      "XGBoost": 0.23,
+      "Isolation Forest": 0.32,
+      "Autoencoder": 0.51
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 12,
+    "tx_id": "TXN-CC-00013",
+    "timestamp": "2024-09-01 21:43:24",
+    "is_fraud": 0,
+    "amount": 245.98,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 13,
+    "tx_id": "TXN-CC-00014",
+    "timestamp": "2024-09-01 21:45:54",
+    "is_fraud": 1,
+    "amount": 1372.13,
+    "scores": {
+      "Ensemble": 0.95,
+      "XGBoost": 0.98,
+      "Isolation Forest": 0.6,
+      "Autoencoder": 0.87
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 14,
+    "tx_id": "TXN-CC-00015",
+    "timestamp": "2024-09-01 23:32:08",
+    "is_fraud": 0,
+    "amount": 9.53,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.32,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 15,
+    "tx_id": "TXN-CC-00016",
+    "timestamp": "2024-09-02 00:39:00",
+    "is_fraud": 0,
+    "amount": 419.2,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 16,
+    "tx_id": "TXN-CC-00017",
+    "timestamp": "2024-09-02 01:58:02",
+    "is_fraud": 0,
+    "amount": 1540.39,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 17,
+    "tx_id": "TXN-CC-00018",
+    "timestamp": "2024-09-02 03:54:51",
+    "is_fraud": 0,
+    "amount": 178.46,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 18,
+    "tx_id": "TXN-CC-00019",
+    "timestamp": "2024-09-02 06:29:03",
+    "is_fraud": 0,
+    "amount": 274.02,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.2
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 19,
+    "tx_id": "TXN-CC-00020",
+    "timestamp": "2024-09-02 06:41:18",
+    "is_fraud": 0,
+    "amount": 227.81,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 20,
+    "tx_id": "TXN-CC-00021",
+    "timestamp": "2024-09-02 10:01:39",
+    "is_fraud": 0,
+    "amount": 226.39,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 21,
+    "tx_id": "TXN-CC-00022",
+    "timestamp": "2024-09-02 13:05:27",
+    "is_fraud": 0,
+    "amount": 1102.42,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 22,
+    "tx_id": "TXN-CC-00023",
+    "timestamp": "2024-09-02 18:31:04",
+    "is_fraud": 1,
+    "amount": 215.18,
+    "scores": {
+      "Ensemble": 0.95,
+      "XGBoost": 0.76,
+      "Isolation Forest": 0.67,
+      "Autoencoder": 0.75
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 23,
+    "tx_id": "TXN-CC-00024",
+    "timestamp": "2024-09-02 22:24:16",
+    "is_fraud": 0,
+    "amount": 67.61,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 24,
+    "tx_id": "TXN-CC-00025",
+    "timestamp": "2024-09-03 01:14:13",
+    "is_fraud": 0,
+    "amount": 485.89,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 25,
+    "tx_id": "TXN-CC-00026",
+    "timestamp": "2024-09-03 01:15:42",
+    "is_fraud": 1,
+    "amount": 115.72,
+    "scores": {
+      "Ensemble": 0.73,
+      "XGBoost": 0.97,
+      "Isolation Forest": 0.95,
+      "Autoencoder": 0.54
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 26,
+    "tx_id": "TXN-CC-00027",
+    "timestamp": "2024-09-03 06:19:48",
+    "is_fraud": 0,
+    "amount": 72.76,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 27,
+    "tx_id": "TXN-CC-00028",
+    "timestamp": "2024-09-03 06:55:55",
+    "is_fraud": 0,
+    "amount": 264.42,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 28,
+    "tx_id": "TXN-CC-00029",
+    "timestamp": "2024-09-03 08:42:28",
+    "is_fraud": 0,
+    "amount": 1526.58,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 29,
+    "tx_id": "TXN-CC-00030",
+    "timestamp": "2024-09-03 09:27:32",
+    "is_fraud": 0,
+    "amount": 450.53,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 30,
+    "tx_id": "TXN-CC-00031",
+    "timestamp": "2024-09-03 09:31:29",
+    "is_fraud": 0,
+    "amount": 420.78,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 31,
+    "tx_id": "TXN-CC-00032",
+    "timestamp": "2024-09-03 10:28:46",
+    "is_fraud": 0,
+    "amount": 483.25,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 32,
+    "tx_id": "TXN-CC-00033",
+    "timestamp": "2024-09-03 11:05:55",
+    "is_fraud": 0,
+    "amount": 249.25,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 33,
+    "tx_id": "TXN-CC-00034",
+    "timestamp": "2024-09-03 13:09:29",
+    "is_fraud": 0,
+    "amount": 276.82,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 34,
+    "tx_id": "TXN-CC-00035",
+    "timestamp": "2024-09-03 14:34:25",
+    "is_fraud": 0,
+    "amount": 89.31,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 35,
+    "tx_id": "TXN-CC-00036",
+    "timestamp": "2024-09-03 14:38:08",
+    "is_fraud": 0,
+    "amount": 229.93,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 36,
+    "tx_id": "TXN-CC-00037",
+    "timestamp": "2024-09-03 17:26:30",
+    "is_fraud": 0,
+    "amount": 652.65,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 37,
+    "tx_id": "TXN-CC-00038",
+    "timestamp": "2024-09-03 18:04:11",
+    "is_fraud": 0,
+    "amount": 367.44,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 38,
+    "tx_id": "TXN-CC-00039",
+    "timestamp": "2024-09-03 19:07:34",
+    "is_fraud": 0,
+    "amount": 134.57,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 39,
+    "tx_id": "TXN-CC-00040",
+    "timestamp": "2024-09-03 20:40:51",
+    "is_fraud": 1,
+    "amount": 329.77,
+    "scores": {
+      "Ensemble": 0.86,
+      "XGBoost": 0.94,
+      "Isolation Forest": 0.46,
+      "Autoencoder": 0.67
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 40,
+    "tx_id": "TXN-CC-00041",
+    "timestamp": "2024-09-03 22:26:09",
+    "is_fraud": 1,
+    "amount": 765.03,
+    "scores": {
+      "Ensemble": 0.84,
+      "XGBoost": 0.74,
+      "Isolation Forest": 0.79,
+      "Autoencoder": 0.62
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 41,
+    "tx_id": "TXN-CC-00042",
+    "timestamp": "2024-09-04 00:15:46",
+    "is_fraud": 0,
+    "amount": 1852.61,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.02,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 42,
+    "tx_id": "TXN-CC-00043",
+    "timestamp": "2024-09-04 00:29:32",
+    "is_fraud": 1,
+    "amount": 120.7,
+    "scores": {
+      "Ensemble": 0.65,
+      "XGBoost": 0.78,
+      "Isolation Forest": 0.93,
+      "Autoencoder": 0.56
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "medium"
+  },
+  {
+    "index": 43,
+    "tx_id": "TXN-CC-00044",
+    "timestamp": "2024-09-04 00:44:49",
+    "is_fraud": 1,
+    "amount": 144.24,
+    "scores": {
+      "Ensemble": 0.86,
+      "XGBoost": 0.71,
+      "Isolation Forest": 0.45,
+      "Autoencoder": 0.87
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 44,
+    "tx_id": "TXN-CC-00045",
+    "timestamp": "2024-09-04 02:17:25",
+    "is_fraud": 0,
+    "amount": 328.12,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 45,
+    "tx_id": "TXN-CC-00046",
+    "timestamp": "2024-09-04 02:37:57",
+    "is_fraud": 0,
+    "amount": 395.95,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 46,
+    "tx_id": "TXN-CC-00047",
+    "timestamp": "2024-09-04 03:26:55",
+    "is_fraud": 0,
+    "amount": 184.96,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 47,
+    "tx_id": "TXN-CC-00048",
+    "timestamp": "2024-09-04 05:09:08",
+    "is_fraud": 0,
+    "amount": 390.42,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 48,
+    "tx_id": "TXN-CC-00049",
+    "timestamp": "2024-09-04 06:32:57",
+    "is_fraud": 0,
+    "amount": 8783.88,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 49,
+    "tx_id": "TXN-CC-00050",
+    "timestamp": "2024-09-04 07:29:42",
+    "is_fraud": 0,
+    "amount": 418.71,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 50,
+    "tx_id": "TXN-CC-00051",
+    "timestamp": "2024-09-04 10:04:24",
+    "is_fraud": 0,
+    "amount": 459.44,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.2
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 51,
+    "tx_id": "TXN-CC-00052",
+    "timestamp": "2024-09-04 10:18:39",
+    "is_fraud": 1,
+    "amount": 1357.03,
+    "scores": {
+      "Ensemble": 0.88,
+      "XGBoost": 0.71,
+      "Isolation Forest": 0.84,
+      "Autoencoder": 0.83
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 52,
+    "tx_id": "TXN-CC-00053",
+    "timestamp": "2024-09-04 10:33:04",
+    "is_fraud": 0,
+    "amount": 1200.5,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 53,
+    "tx_id": "TXN-CC-00054",
+    "timestamp": "2024-09-04 13:19:17",
+    "is_fraud": 0,
+    "amount": 355.53,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 54,
+    "tx_id": "TXN-CC-00055",
+    "timestamp": "2024-09-04 14:44:30",
+    "is_fraud": 0,
+    "amount": 30.33,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 55,
+    "tx_id": "TXN-CC-00056",
+    "timestamp": "2024-09-04 15:27:31",
+    "is_fraud": 0,
+    "amount": 86.81,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 56,
+    "tx_id": "TXN-CC-00057",
+    "timestamp": "2024-09-04 17:31:57",
+    "is_fraud": 0,
+    "amount": 331.02,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 57,
+    "tx_id": "TXN-CC-00058",
+    "timestamp": "2024-09-04 19:59:56",
+    "is_fraud": 0,
+    "amount": 86.58,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 58,
+    "tx_id": "TXN-CC-00059",
+    "timestamp": "2024-09-05 00:24:11",
+    "is_fraud": 0,
+    "amount": 326.76,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 59,
+    "tx_id": "TXN-CC-00060",
+    "timestamp": "2024-09-05 00:34:11",
+    "is_fraud": 0,
+    "amount": 348.03,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 60,
+    "tx_id": "TXN-CC-00061",
+    "timestamp": "2024-09-05 01:02:19",
+    "is_fraud": 0,
+    "amount": 454.41,
+    "scores": {
+      "Ensemble": 0.3,
+      "XGBoost": 0.29,
+      "Isolation Forest": 0.59,
+      "Autoencoder": 0.27
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "medium"
+  },
+  {
+    "index": 61,
+    "tx_id": "TXN-CC-00062",
+    "timestamp": "2024-09-05 02:29:27",
+    "is_fraud": 0,
+    "amount": 1430.49,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 62,
+    "tx_id": "TXN-CC-00063",
+    "timestamp": "2024-09-05 04:12:47",
+    "is_fraud": 0,
+    "amount": 45.77,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 63,
+    "tx_id": "TXN-CC-00064",
+    "timestamp": "2024-09-05 05:02:29",
+    "is_fraud": 1,
+    "amount": 1566.96,
+    "scores": {
+      "Ensemble": 0.93,
+      "XGBoost": 0.85,
+      "Isolation Forest": 0.94,
+      "Autoencoder": 0.86
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 64,
+    "tx_id": "TXN-CC-00065",
+    "timestamp": "2024-09-05 07:07:04",
+    "is_fraud": 0,
+    "amount": 204.88,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 65,
+    "tx_id": "TXN-CC-00066",
+    "timestamp": "2024-09-05 07:41:41",
+    "is_fraud": 0,
+    "amount": 494.88,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 66,
+    "tx_id": "TXN-CC-00067",
+    "timestamp": "2024-09-05 09:24:21",
+    "is_fraud": 0,
+    "amount": 403.39,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 67,
+    "tx_id": "TXN-CC-00068",
+    "timestamp": "2024-09-05 13:12:44",
+    "is_fraud": 1,
+    "amount": 131.73,
+    "scores": {
+      "Ensemble": 0.95,
+      "XGBoost": 0.96,
+      "Isolation Forest": 0.6,
+      "Autoencoder": 0.74
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 68,
+    "tx_id": "TXN-CC-00069",
+    "timestamp": "2024-09-05 16:58:38",
+    "is_fraud": 0,
+    "amount": 106.96,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 69,
+    "tx_id": "TXN-CC-00070",
+    "timestamp": "2024-09-05 18:07:59",
+    "is_fraud": 0,
+    "amount": 454.11,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 70,
+    "tx_id": "TXN-CC-00071",
+    "timestamp": "2024-09-06 04:35:58",
+    "is_fraud": 0,
+    "amount": 1287.98,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 71,
+    "tx_id": "TXN-CC-00072",
+    "timestamp": "2024-09-06 05:26:01",
+    "is_fraud": 1,
+    "amount": 349.21,
+    "scores": {
+      "Ensemble": 0.95,
+      "XGBoost": 0.89,
+      "Isolation Forest": 0.86,
+      "Autoencoder": 0.79
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 72,
+    "tx_id": "TXN-CC-00073",
+    "timestamp": "2024-09-06 05:30:57",
+    "is_fraud": 0,
+    "amount": 12068.86,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 73,
+    "tx_id": "TXN-CC-00074",
+    "timestamp": "2024-09-06 06:31:08",
+    "is_fraud": 0,
+    "amount": 447.4,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 74,
+    "tx_id": "TXN-CC-00075",
+    "timestamp": "2024-09-06 07:44:39",
+    "is_fraud": 0,
+    "amount": 337.69,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.32,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 75,
+    "tx_id": "TXN-CC-00076",
+    "timestamp": "2024-09-06 07:53:12",
+    "is_fraud": 0,
+    "amount": 107.12,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 76,
+    "tx_id": "TXN-CC-00077",
+    "timestamp": "2024-09-06 09:35:39",
+    "is_fraud": 0,
+    "amount": 220.86,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 77,
+    "tx_id": "TXN-CC-00078",
+    "timestamp": "2024-09-06 14:26:04",
+    "is_fraud": 0,
+    "amount": 889.92,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 78,
+    "tx_id": "TXN-CC-00079",
+    "timestamp": "2024-09-06 15:00:29",
+    "is_fraud": 0,
+    "amount": 444.33,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 79,
+    "tx_id": "TXN-CC-00080",
+    "timestamp": "2024-09-06 15:19:03",
+    "is_fraud": 1,
+    "amount": 7358.93,
+    "scores": {
+      "Ensemble": 0.8,
+      "XGBoost": 0.78,
+      "Isolation Forest": 0.77,
+      "Autoencoder": 0.69
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 80,
+    "tx_id": "TXN-CC-00081",
+    "timestamp": "2024-09-06 17:43:00",
+    "is_fraud": 0,
+    "amount": 219.32,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 81,
+    "tx_id": "TXN-CC-00082",
+    "timestamp": "2024-09-06 18:03:37",
+    "is_fraud": 0,
+    "amount": 283.7,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 82,
+    "tx_id": "TXN-CC-00083",
+    "timestamp": "2024-09-06 18:59:17",
+    "is_fraud": 0,
+    "amount": 5848.61,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 83,
+    "tx_id": "TXN-CC-00084",
+    "timestamp": "2024-09-06 21:56:17",
+    "is_fraud": 1,
+    "amount": 58.7,
+    "scores": {
+      "Ensemble": 0.84,
+      "XGBoost": 0.91,
+      "Isolation Forest": 0.68,
+      "Autoencoder": 0.86
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 84,
+    "tx_id": "TXN-CC-00085",
+    "timestamp": "2024-09-06 23:01:26",
+    "is_fraud": 0,
+    "amount": 883.47,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 85,
+    "tx_id": "TXN-CC-00086",
+    "timestamp": "2024-09-07 03:27:51",
+    "is_fraud": 0,
+    "amount": 13301.11,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 86,
+    "tx_id": "TXN-CC-00087",
+    "timestamp": "2024-09-07 04:41:55",
+    "is_fraud": 0,
+    "amount": 158.21,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.05,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 87,
+    "tx_id": "TXN-CC-00088",
+    "timestamp": "2024-09-07 05:37:52",
+    "is_fraud": 0,
+    "amount": 179.31,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 88,
+    "tx_id": "TXN-CC-00089",
+    "timestamp": "2024-09-07 05:55:34",
+    "is_fraud": 0,
+    "amount": 476.52,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 89,
+    "tx_id": "TXN-CC-00090",
+    "timestamp": "2024-09-07 06:16:02",
+    "is_fraud": 0,
+    "amount": 312.92,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 90,
+    "tx_id": "TXN-CC-00091",
+    "timestamp": "2024-09-07 06:33:03",
+    "is_fraud": 0,
+    "amount": 482.42,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 91,
+    "tx_id": "TXN-CC-00092",
+    "timestamp": "2024-09-07 09:18:12",
+    "is_fraud": 0,
+    "amount": 87.02,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 92,
+    "tx_id": "TXN-CC-00093",
+    "timestamp": "2024-09-07 10:43:07",
+    "is_fraud": 0,
+    "amount": 22.82,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 93,
+    "tx_id": "TXN-CC-00094",
+    "timestamp": "2024-09-07 13:47:40",
+    "is_fraud": 0,
+    "amount": 322.94,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 94,
+    "tx_id": "TXN-CC-00095",
+    "timestamp": "2024-09-07 14:53:58",
+    "is_fraud": 0,
+    "amount": 381.29,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 95,
+    "tx_id": "TXN-CC-00096",
+    "timestamp": "2024-09-07 16:18:23",
+    "is_fraud": 1,
+    "amount": 8556.01,
+    "scores": {
+      "Ensemble": 0.68,
+      "XGBoost": 0.81,
+      "Isolation Forest": 0.47,
+      "Autoencoder": 0.66
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "medium"
+  },
+  {
+    "index": 96,
+    "tx_id": "TXN-CC-00097",
+    "timestamp": "2024-09-07 20:55:02",
+    "is_fraud": 1,
+    "amount": 1874.84,
+    "scores": {
+      "Ensemble": 0.65,
+      "XGBoost": 0.72,
+      "Isolation Forest": 0.86,
+      "Autoencoder": 0.84
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "medium"
+  },
+  {
+    "index": 97,
+    "tx_id": "TXN-CC-00098",
+    "timestamp": "2024-09-07 21:11:58",
+    "is_fraud": 0,
+    "amount": 15.9,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.05,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 98,
+    "tx_id": "TXN-CC-00099",
+    "timestamp": "2024-09-07 21:16:42",
+    "is_fraud": 0,
+    "amount": 775.49,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 99,
+    "tx_id": "TXN-CC-00100",
+    "timestamp": "2024-09-07 22:45:09",
+    "is_fraud": 0,
+    "amount": 436.52,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 100,
+    "tx_id": "TXN-CC-00101",
+    "timestamp": "2024-09-07 22:49:05",
+    "is_fraud": 0,
+    "amount": 990.6,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 101,
+    "tx_id": "TXN-CC-00102",
+    "timestamp": "2024-09-07 23:50:05",
+    "is_fraud": 0,
+    "amount": 15.66,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 102,
+    "tx_id": "TXN-CC-00103",
+    "timestamp": "2024-09-08 03:02:27",
+    "is_fraud": 0,
+    "amount": 1340.67,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 103,
+    "tx_id": "TXN-CC-00104",
+    "timestamp": "2024-09-08 05:17:41",
+    "is_fraud": 0,
+    "amount": 394.65,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 104,
+    "tx_id": "TXN-CC-00105",
+    "timestamp": "2024-09-08 06:16:43",
+    "is_fraud": 0,
+    "amount": 307.21,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 105,
+    "tx_id": "TXN-CC-00106",
+    "timestamp": "2024-09-08 06:19:59",
+    "is_fraud": 0,
+    "amount": 267.9,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.05,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 106,
+    "tx_id": "TXN-CC-00107",
+    "timestamp": "2024-09-08 06:37:46",
+    "is_fraud": 0,
+    "amount": 1581.81,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.05,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 107,
+    "tx_id": "TXN-CC-00108",
+    "timestamp": "2024-09-08 07:05:56",
+    "is_fraud": 0,
+    "amount": 294.24,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 108,
+    "tx_id": "TXN-CC-00109",
+    "timestamp": "2024-09-08 09:17:13",
+    "is_fraud": 0,
+    "amount": 433.26,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 109,
+    "tx_id": "TXN-CC-00110",
+    "timestamp": "2024-09-08 09:45:08",
+    "is_fraud": 0,
+    "amount": 8346.44,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 110,
+    "tx_id": "TXN-CC-00111",
+    "timestamp": "2024-09-08 11:18:47",
+    "is_fraud": 0,
+    "amount": 284.65,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 111,
+    "tx_id": "TXN-CC-00112",
+    "timestamp": "2024-09-08 15:16:27",
+    "is_fraud": 0,
+    "amount": 824.92,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 112,
+    "tx_id": "TXN-CC-00113",
+    "timestamp": "2024-09-08 16:41:39",
+    "is_fraud": 0,
+    "amount": 170.38,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 113,
+    "tx_id": "TXN-CC-00114",
+    "timestamp": "2024-09-08 17:38:57",
+    "is_fraud": 0,
+    "amount": 1326.78,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 114,
+    "tx_id": "TXN-CC-00115",
+    "timestamp": "2024-09-08 17:49:03",
+    "is_fraud": 0,
+    "amount": 227.94,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 115,
+    "tx_id": "TXN-CC-00116",
+    "timestamp": "2024-09-08 19:22:50",
+    "is_fraud": 0,
+    "amount": 1448.89,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 116,
+    "tx_id": "TXN-CC-00117",
+    "timestamp": "2024-09-08 20:10:09",
+    "is_fraud": 0,
+    "amount": 294.01,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 117,
+    "tx_id": "TXN-CC-00118",
+    "timestamp": "2024-09-08 20:21:35",
+    "is_fraud": 0,
+    "amount": 1981.75,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 118,
+    "tx_id": "TXN-CC-00119",
+    "timestamp": "2024-09-08 20:31:30",
+    "is_fraud": 0,
+    "amount": 527.8,
+    "scores": {
+      "Ensemble": 0.39,
+      "XGBoost": 0.3,
+      "Isolation Forest": 0.57,
+      "Autoencoder": 0.32
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "medium"
+  },
+  {
+    "index": 119,
+    "tx_id": "TXN-CC-00120",
+    "timestamp": "2024-09-08 21:13:15",
+    "is_fraud": 0,
+    "amount": 1175,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 120,
+    "tx_id": "TXN-CC-00121",
+    "timestamp": "2024-09-08 21:28:56",
+    "is_fraud": 0,
+    "amount": 365.32,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 121,
+    "tx_id": "TXN-CC-00122",
+    "timestamp": "2024-09-08 23:17:38",
+    "is_fraud": 0,
+    "amount": 14.61,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 122,
+    "tx_id": "TXN-CC-00123",
+    "timestamp": "2024-09-09 05:44:26",
+    "is_fraud": 0,
+    "amount": 120.83,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 123,
+    "tx_id": "TXN-CC-00124",
+    "timestamp": "2024-09-09 07:34:33",
+    "is_fraud": 0,
+    "amount": 126.97,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 124,
+    "tx_id": "TXN-CC-00125",
+    "timestamp": "2024-09-09 07:35:39",
+    "is_fraud": 0,
+    "amount": 205.15,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 125,
+    "tx_id": "TXN-CC-00126",
+    "timestamp": "2024-09-09 09:10:20",
+    "is_fraud": 0,
+    "amount": 378.47,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 126,
+    "tx_id": "TXN-CC-00127",
+    "timestamp": "2024-09-09 10:04:33",
+    "is_fraud": 0,
+    "amount": 176.62,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 127,
+    "tx_id": "TXN-CC-00128",
+    "timestamp": "2024-09-09 10:44:40",
+    "is_fraud": 0,
+    "amount": 306.98,
+    "scores": {
+      "Ensemble": 0.28,
+      "XGBoost": 0.37,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.51
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 128,
+    "tx_id": "TXN-CC-00129",
+    "timestamp": "2024-09-09 11:05:45",
+    "is_fraud": 0,
+    "amount": 182.87,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 129,
+    "tx_id": "TXN-CC-00130",
+    "timestamp": "2024-09-09 12:47:04",
+    "is_fraud": 0,
+    "amount": 87.35,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 130,
+    "tx_id": "TXN-CC-00131",
+    "timestamp": "2024-09-09 15:23:31",
+    "is_fraud": 0,
+    "amount": 1197.76,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.2
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 131,
+    "tx_id": "TXN-CC-00132",
+    "timestamp": "2024-09-09 16:01:59",
+    "is_fraud": 0,
+    "amount": 339.9,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 132,
+    "tx_id": "TXN-CC-00133",
+    "timestamp": "2024-09-09 18:06:20",
+    "is_fraud": 0,
+    "amount": 2441.87,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 133,
+    "tx_id": "TXN-CC-00134",
+    "timestamp": "2024-09-09 19:07:24",
+    "is_fraud": 0,
+    "amount": 232.36,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 134,
+    "tx_id": "TXN-CC-00135",
+    "timestamp": "2024-09-09 19:16:10",
+    "is_fraud": 0,
+    "amount": 190.91,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 135,
+    "tx_id": "TXN-CC-00136",
+    "timestamp": "2024-09-09 20:20:44",
+    "is_fraud": 0,
+    "amount": 79.1,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 136,
+    "tx_id": "TXN-CC-00137",
+    "timestamp": "2024-09-09 23:43:56",
+    "is_fraud": 0,
+    "amount": 45.41,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 137,
+    "tx_id": "TXN-CC-00138",
+    "timestamp": "2024-09-10 02:25:22",
+    "is_fraud": 0,
+    "amount": 348.52,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 138,
+    "tx_id": "TXN-CC-00139",
+    "timestamp": "2024-09-10 04:54:00",
+    "is_fraud": 0,
+    "amount": 394.54,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 139,
+    "tx_id": "TXN-CC-00140",
+    "timestamp": "2024-09-10 05:22:07",
+    "is_fraud": 0,
+    "amount": 1683.07,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 140,
+    "tx_id": "TXN-CC-00141",
+    "timestamp": "2024-09-10 06:37:58",
+    "is_fraud": 0,
+    "amount": 63.25,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 141,
+    "tx_id": "TXN-CC-00142",
+    "timestamp": "2024-09-10 06:51:15",
+    "is_fraud": 0,
+    "amount": 1228.77,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 142,
+    "tx_id": "TXN-CC-00143",
+    "timestamp": "2024-09-10 07:51:42",
+    "is_fraud": 0,
+    "amount": 648.34,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 143,
+    "tx_id": "TXN-CC-00144",
+    "timestamp": "2024-09-10 08:37:42",
+    "is_fraud": 0,
+    "amount": 101.87,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.2
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 144,
+    "tx_id": "TXN-CC-00145",
+    "timestamp": "2024-09-10 10:27:53",
+    "is_fraud": 1,
+    "amount": 9467.36,
+    "scores": {
+      "Ensemble": 0.71,
+      "XGBoost": 0.76,
+      "Isolation Forest": 0.57,
+      "Autoencoder": 0.71
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 145,
+    "tx_id": "TXN-CC-00146",
+    "timestamp": "2024-09-10 11:37:45",
+    "is_fraud": 0,
+    "amount": 144.11,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 146,
+    "tx_id": "TXN-CC-00147",
+    "timestamp": "2024-09-10 11:51:00",
+    "is_fraud": 0,
+    "amount": 1864.57,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 147,
+    "tx_id": "TXN-CC-00148",
+    "timestamp": "2024-09-10 14:28:31",
+    "is_fraud": 0,
+    "amount": 156.51,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 148,
+    "tx_id": "TXN-CC-00149",
+    "timestamp": "2024-09-10 14:56:15",
+    "is_fraud": 0,
+    "amount": 1340.65,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.32,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 149,
+    "tx_id": "TXN-CC-00150",
+    "timestamp": "2024-09-10 15:02:32",
+    "is_fraud": 0,
+    "amount": 73.29,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 150,
+    "tx_id": "TXN-CC-00151",
+    "timestamp": "2024-09-10 15:36:31",
+    "is_fraud": 0,
+    "amount": 276.28,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 151,
+    "tx_id": "TXN-CC-00152",
+    "timestamp": "2024-09-10 16:32:36",
+    "is_fraud": 0,
+    "amount": 173.52,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 152,
+    "tx_id": "TXN-CC-00153",
+    "timestamp": "2024-09-10 18:55:36",
+    "is_fraud": 0,
+    "amount": 14927.55,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 153,
+    "tx_id": "TXN-CC-00154",
+    "timestamp": "2024-09-10 21:32:38",
+    "is_fraud": 0,
+    "amount": 397.65,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 154,
+    "tx_id": "TXN-CC-00155",
+    "timestamp": "2024-09-10 22:30:18",
+    "is_fraud": 1,
+    "amount": 78.24,
+    "scores": {
+      "Ensemble": 0.86,
+      "XGBoost": 0.91,
+      "Isolation Forest": 0.91,
+      "Autoencoder": 0.57
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 155,
+    "tx_id": "TXN-CC-00156",
+    "timestamp": "2024-09-10 22:33:34",
+    "is_fraud": 0,
+    "amount": 10.4,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 156,
+    "tx_id": "TXN-CC-00157",
+    "timestamp": "2024-09-10 23:12:53",
+    "is_fraud": 0,
+    "amount": 405.15,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 157,
+    "tx_id": "TXN-CC-00158",
+    "timestamp": "2024-09-11 03:46:48",
+    "is_fraud": 1,
+    "amount": 139.98,
+    "scores": {
+      "Ensemble": 0.93,
+      "XGBoost": 0.94,
+      "Isolation Forest": 0.74,
+      "Autoencoder": 0.92
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 158,
+    "tx_id": "TXN-CC-00159",
+    "timestamp": "2024-09-11 05:36:50",
+    "is_fraud": 1,
+    "amount": 900.91,
+    "scores": {
+      "Ensemble": 0.71,
+      "XGBoost": 0.97,
+      "Isolation Forest": 0.78,
+      "Autoencoder": 0.64
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 159,
+    "tx_id": "TXN-CC-00160",
+    "timestamp": "2024-09-11 05:43:16",
+    "is_fraud": 0,
+    "amount": 1227.28,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.32,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 160,
+    "tx_id": "TXN-CC-00161",
+    "timestamp": "2024-09-11 08:29:55",
+    "is_fraud": 0,
+    "amount": 80.5,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 161,
+    "tx_id": "TXN-CC-00162",
+    "timestamp": "2024-09-11 12:33:42",
+    "is_fraud": 0,
+    "amount": 599.5,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.36,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.35
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 162,
+    "tx_id": "TXN-CC-00163",
+    "timestamp": "2024-09-11 14:03:39",
+    "is_fraud": 0,
+    "amount": 214.99,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 163,
+    "tx_id": "TXN-CC-00164",
+    "timestamp": "2024-09-11 14:59:30",
+    "is_fraud": 0,
+    "amount": 1361.51,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 164,
+    "tx_id": "TXN-CC-00165",
+    "timestamp": "2024-09-11 15:17:54",
+    "is_fraud": 0,
+    "amount": 137.39,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 165,
+    "tx_id": "TXN-CC-00166",
+    "timestamp": "2024-09-11 16:57:40",
+    "is_fraud": 1,
+    "amount": 70.96,
+    "scores": {
+      "Ensemble": 0.87,
+      "XGBoost": 0.83,
+      "Isolation Forest": 0.63,
+      "Autoencoder": 0.71
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 166,
+    "tx_id": "TXN-CC-00167",
+    "timestamp": "2024-09-11 17:24:31",
+    "is_fraud": 0,
+    "amount": 274.35,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 167,
+    "tx_id": "TXN-CC-00168",
+    "timestamp": "2024-09-11 18:26:14",
+    "is_fraud": 0,
+    "amount": 337.93,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.2
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 168,
+    "tx_id": "TXN-CC-00169",
+    "timestamp": "2024-09-11 20:06:00",
+    "is_fraud": 0,
+    "amount": 258.62,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 169,
+    "tx_id": "TXN-CC-00170",
+    "timestamp": "2024-09-11 20:06:02",
+    "is_fraud": 0,
+    "amount": 233.25,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 170,
+    "tx_id": "TXN-CC-00171",
+    "timestamp": "2024-09-11 21:08:29",
+    "is_fraud": 0,
+    "amount": 312.52,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 171,
+    "tx_id": "TXN-CC-00172",
+    "timestamp": "2024-09-11 21:38:09",
+    "is_fraud": 0,
+    "amount": 336,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 172,
+    "tx_id": "TXN-CC-00173",
+    "timestamp": "2024-09-11 22:25:19",
+    "is_fraud": 1,
+    "amount": 326.51,
+    "scores": {
+      "Ensemble": 0.83,
+      "XGBoost": 0.88,
+      "Isolation Forest": 0.74,
+      "Autoencoder": 0.91
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 173,
+    "tx_id": "TXN-CC-00174",
+    "timestamp": "2024-09-11 23:22:39",
+    "is_fraud": 1,
+    "amount": 938.68,
+    "scores": {
+      "Ensemble": 0.74,
+      "XGBoost": 0.83,
+      "Isolation Forest": 0.59,
+      "Autoencoder": 0.63
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 174,
+    "tx_id": "TXN-CC-00175",
+    "timestamp": "2024-09-12 02:30:46",
+    "is_fraud": 0,
+    "amount": 1006.36,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 175,
+    "tx_id": "TXN-CC-00176",
+    "timestamp": "2024-09-12 03:19:57",
+    "is_fraud": 0,
+    "amount": 7.08,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 176,
+    "tx_id": "TXN-CC-00177",
+    "timestamp": "2024-09-12 04:29:00",
+    "is_fraud": 0,
+    "amount": 236.27,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 177,
+    "tx_id": "TXN-CC-00178",
+    "timestamp": "2024-09-12 04:58:20",
+    "is_fraud": 0,
+    "amount": 99.32,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 178,
+    "tx_id": "TXN-CC-00179",
+    "timestamp": "2024-09-12 07:03:12",
+    "is_fraud": 0,
+    "amount": 111.03,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 179,
+    "tx_id": "TXN-CC-00180",
+    "timestamp": "2024-09-12 10:17:35",
+    "is_fraud": 0,
+    "amount": 353.29,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 180,
+    "tx_id": "TXN-CC-00181",
+    "timestamp": "2024-09-12 10:54:54",
+    "is_fraud": 0,
+    "amount": 1629.11,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.35,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 181,
+    "tx_id": "TXN-CC-00182",
+    "timestamp": "2024-09-12 13:01:59",
+    "is_fraud": 0,
+    "amount": 139.15,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 182,
+    "tx_id": "TXN-CC-00183",
+    "timestamp": "2024-09-12 13:58:33",
+    "is_fraud": 0,
+    "amount": 11238.46,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 183,
+    "tx_id": "TXN-CC-00184",
+    "timestamp": "2024-09-12 16:23:55",
+    "is_fraud": 0,
+    "amount": 135.69,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 184,
+    "tx_id": "TXN-CC-00185",
+    "timestamp": "2024-09-12 16:39:10",
+    "is_fraud": 0,
+    "amount": 14016.58,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 185,
+    "tx_id": "TXN-CC-00186",
+    "timestamp": "2024-09-12 19:19:22",
+    "is_fraud": 0,
+    "amount": 195.09,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 186,
+    "tx_id": "TXN-CC-00187",
+    "timestamp": "2024-09-12 20:02:06",
+    "is_fraud": 0,
+    "amount": 10.5,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 187,
+    "tx_id": "TXN-CC-00188",
+    "timestamp": "2024-09-12 21:25:34",
+    "is_fraud": 0,
+    "amount": 347.73,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.02,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 188,
+    "tx_id": "TXN-CC-00189",
+    "timestamp": "2024-09-12 22:40:23",
+    "is_fraud": 1,
+    "amount": 818.06,
+    "scores": {
+      "Ensemble": 0.98,
+      "XGBoost": 0.98,
+      "Isolation Forest": 0.49,
+      "Autoencoder": 0.89
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 189,
+    "tx_id": "TXN-CC-00190",
+    "timestamp": "2024-09-12 22:51:40",
+    "is_fraud": 1,
+    "amount": 1380.32,
+    "scores": {
+      "Ensemble": 0.67,
+      "XGBoost": 0.91,
+      "Isolation Forest": 0.83,
+      "Autoencoder": 0.63
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "medium"
+  },
+  {
+    "index": 190,
+    "tx_id": "TXN-CC-00191",
+    "timestamp": "2024-09-13 02:36:05",
+    "is_fraud": 0,
+    "amount": 233.36,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 191,
+    "tx_id": "TXN-CC-00192",
+    "timestamp": "2024-09-13 05:04:52",
+    "is_fraud": 0,
+    "amount": 116.1,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 192,
+    "tx_id": "TXN-CC-00193",
+    "timestamp": "2024-09-13 07:48:21",
+    "is_fraud": 0,
+    "amount": 1170.54,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 193,
+    "tx_id": "TXN-CC-00194",
+    "timestamp": "2024-09-13 08:53:22",
+    "is_fraud": 1,
+    "amount": 195.99,
+    "scores": {
+      "Ensemble": 0.72,
+      "XGBoost": 0.92,
+      "Isolation Forest": 0.55,
+      "Autoencoder": 0.62
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 194,
+    "tx_id": "TXN-CC-00195",
+    "timestamp": "2024-09-13 09:10:47",
+    "is_fraud": 0,
+    "amount": 445.65,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 195,
+    "tx_id": "TXN-CC-00196",
+    "timestamp": "2024-09-13 09:49:01",
+    "is_fraud": 0,
+    "amount": 203.81,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 196,
+    "tx_id": "TXN-CC-00197",
+    "timestamp": "2024-09-13 14:13:23",
+    "is_fraud": 0,
+    "amount": 415.59,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 197,
+    "tx_id": "TXN-CC-00198",
+    "timestamp": "2024-09-13 15:35:25",
+    "is_fraud": 0,
+    "amount": 382.42,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 198,
+    "tx_id": "TXN-CC-00199",
+    "timestamp": "2024-09-13 18:23:54",
+    "is_fraud": 0,
+    "amount": 245.04,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 199,
+    "tx_id": "TXN-CC-00200",
+    "timestamp": "2024-09-13 20:57:25",
+    "is_fraud": 0,
+    "amount": 413.38,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 200,
+    "tx_id": "TXN-CC-00201",
+    "timestamp": "2024-09-13 21:29:10",
+    "is_fraud": 0,
+    "amount": 1474.93,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 201,
+    "tx_id": "TXN-CC-00202",
+    "timestamp": "2024-09-13 22:11:31",
+    "is_fraud": 0,
+    "amount": 61.38,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 202,
+    "tx_id": "TXN-CC-00203",
+    "timestamp": "2024-09-13 22:31:41",
+    "is_fraud": 0,
+    "amount": 295.66,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 203,
+    "tx_id": "TXN-CC-00204",
+    "timestamp": "2024-09-13 23:45:25",
+    "is_fraud": 0,
+    "amount": 347.77,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 204,
+    "tx_id": "TXN-CC-00205",
+    "timestamp": "2024-09-14 03:55:53",
+    "is_fraud": 0,
+    "amount": 279.8,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 205,
+    "tx_id": "TXN-CC-00206",
+    "timestamp": "2024-09-14 04:56:29",
+    "is_fraud": 0,
+    "amount": 437.58,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 206,
+    "tx_id": "TXN-CC-00207",
+    "timestamp": "2024-09-14 05:56:27",
+    "is_fraud": 0,
+    "amount": 182.87,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 207,
+    "tx_id": "TXN-CC-00208",
+    "timestamp": "2024-09-14 07:58:37",
+    "is_fraud": 0,
+    "amount": 376.15,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.35,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 208,
+    "tx_id": "TXN-CC-00209",
+    "timestamp": "2024-09-14 08:36:11",
+    "is_fraud": 0,
+    "amount": 325.24,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 209,
+    "tx_id": "TXN-CC-00210",
+    "timestamp": "2024-09-14 09:31:03",
+    "is_fraud": 0,
+    "amount": 332.53,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 210,
+    "tx_id": "TXN-CC-00211",
+    "timestamp": "2024-09-14 10:05:30",
+    "is_fraud": 0,
+    "amount": 173.83,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 211,
+    "tx_id": "TXN-CC-00212",
+    "timestamp": "2024-09-14 11:31:55",
+    "is_fraud": 0,
+    "amount": 231.56,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 212,
+    "tx_id": "TXN-CC-00213",
+    "timestamp": "2024-09-14 18:09:54",
+    "is_fraud": 0,
+    "amount": 173.52,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 213,
+    "tx_id": "TXN-CC-00214",
+    "timestamp": "2024-09-14 18:47:12",
+    "is_fraud": 0,
+    "amount": 440.5,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 214,
+    "tx_id": "TXN-CC-00215",
+    "timestamp": "2024-09-14 19:23:29",
+    "is_fraud": 0,
+    "amount": 370.49,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 215,
+    "tx_id": "TXN-CC-00216",
+    "timestamp": "2024-09-14 21:30:15",
+    "is_fraud": 0,
+    "amount": 929.27,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 216,
+    "tx_id": "TXN-CC-00217",
+    "timestamp": "2024-09-14 23:01:44",
+    "is_fraud": 0,
+    "amount": 1751.07,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 217,
+    "tx_id": "TXN-CC-00218",
+    "timestamp": "2024-09-14 23:40:31",
+    "is_fraud": 1,
+    "amount": 12937.55,
+    "scores": {
+      "Ensemble": 0.91,
+      "XGBoost": 0.87,
+      "Isolation Forest": 0.66,
+      "Autoencoder": 0.63
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 218,
+    "tx_id": "TXN-CC-00219",
+    "timestamp": "2024-09-15 05:10:55",
+    "is_fraud": 0,
+    "amount": 60.72,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 219,
+    "tx_id": "TXN-CC-00220",
+    "timestamp": "2024-09-15 05:40:30",
+    "is_fraud": 0,
+    "amount": 446.67,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.23,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 220,
+    "tx_id": "TXN-CC-00221",
+    "timestamp": "2024-09-15 07:29:07",
+    "is_fraud": 0,
+    "amount": 319.81,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 221,
+    "tx_id": "TXN-CC-00222",
+    "timestamp": "2024-09-15 07:49:36",
+    "is_fraud": 0,
+    "amount": 384.15,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 222,
+    "tx_id": "TXN-CC-00223",
+    "timestamp": "2024-09-15 08:24:41",
+    "is_fraud": 0,
+    "amount": 560.96,
+    "scores": {
+      "Ensemble": 0.34,
+      "XGBoost": 0.36,
+      "Isolation Forest": 0.46,
+      "Autoencoder": 0.51
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "medium"
+  },
+  {
+    "index": 223,
+    "tx_id": "TXN-CC-00224",
+    "timestamp": "2024-09-15 11:26:36",
+    "is_fraud": 0,
+    "amount": 580.58,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 224,
+    "tx_id": "TXN-CC-00225",
+    "timestamp": "2024-09-15 12:55:27",
+    "is_fraud": 0,
+    "amount": 477.26,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 225,
+    "tx_id": "TXN-CC-00226",
+    "timestamp": "2024-09-15 13:21:21",
+    "is_fraud": 0,
+    "amount": 13139.21,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.32,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 226,
+    "tx_id": "TXN-CC-00227",
+    "timestamp": "2024-09-15 13:30:38",
+    "is_fraud": 0,
+    "amount": 14083.96,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 227,
+    "tx_id": "TXN-CC-00228",
+    "timestamp": "2024-09-15 14:30:57",
+    "is_fraud": 0,
+    "amount": 365.91,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 228,
+    "tx_id": "TXN-CC-00229",
+    "timestamp": "2024-09-15 15:08:24",
+    "is_fraud": 0,
+    "amount": 424.76,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.2
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 229,
+    "tx_id": "TXN-CC-00230",
+    "timestamp": "2024-09-15 17:11:10",
+    "is_fraud": 0,
+    "amount": 151.78,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 230,
+    "tx_id": "TXN-CC-00231",
+    "timestamp": "2024-09-15 17:47:39",
+    "is_fraud": 0,
+    "amount": 118.21,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 231,
+    "tx_id": "TXN-CC-00232",
+    "timestamp": "2024-09-15 21:49:31",
+    "is_fraud": 0,
+    "amount": 420.95,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 232,
+    "tx_id": "TXN-CC-00233",
+    "timestamp": "2024-09-15 23:20:44",
+    "is_fraud": 0,
+    "amount": 228.98,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.32,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 233,
+    "tx_id": "TXN-CC-00234",
+    "timestamp": "2024-09-16 00:28:58",
+    "is_fraud": 0,
+    "amount": 272.06,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 234,
+    "tx_id": "TXN-CC-00235",
+    "timestamp": "2024-09-16 02:32:23",
+    "is_fraud": 0,
+    "amount": 352.88,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 235,
+    "tx_id": "TXN-CC-00236",
+    "timestamp": "2024-09-16 02:33:07",
+    "is_fraud": 0,
+    "amount": 418.34,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 236,
+    "tx_id": "TXN-CC-00237",
+    "timestamp": "2024-09-16 05:52:49",
+    "is_fraud": 0,
+    "amount": 82.74,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 237,
+    "tx_id": "TXN-CC-00238",
+    "timestamp": "2024-09-16 07:00:02",
+    "is_fraud": 0,
+    "amount": 39.1,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 238,
+    "tx_id": "TXN-CC-00239",
+    "timestamp": "2024-09-16 11:17:50",
+    "is_fraud": 0,
+    "amount": 349.4,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 239,
+    "tx_id": "TXN-CC-00240",
+    "timestamp": "2024-09-16 12:45:23",
+    "is_fraud": 0,
+    "amount": 121.14,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 240,
+    "tx_id": "TXN-CC-00241",
+    "timestamp": "2024-09-16 15:23:07",
+    "is_fraud": 0,
+    "amount": 812.91,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 241,
+    "tx_id": "TXN-CC-00242",
+    "timestamp": "2024-09-16 15:29:04",
+    "is_fraud": 0,
+    "amount": 55.06,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 242,
+    "tx_id": "TXN-CC-00243",
+    "timestamp": "2024-09-16 16:08:58",
+    "is_fraud": 0,
+    "amount": 489.32,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 243,
+    "tx_id": "TXN-CC-00244",
+    "timestamp": "2024-09-16 16:12:01",
+    "is_fraud": 0,
+    "amount": 209.74,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 244,
+    "tx_id": "TXN-CC-00245",
+    "timestamp": "2024-09-16 18:02:41",
+    "is_fraud": 0,
+    "amount": 3394.88,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 245,
+    "tx_id": "TXN-CC-00246",
+    "timestamp": "2024-09-16 19:33:11",
+    "is_fraud": 0,
+    "amount": 82.77,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.02,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 246,
+    "tx_id": "TXN-CC-00247",
+    "timestamp": "2024-09-16 22:26:50",
+    "is_fraud": 0,
+    "amount": 264.13,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 247,
+    "tx_id": "TXN-CC-00248",
+    "timestamp": "2024-09-17 01:31:23",
+    "is_fraud": 1,
+    "amount": 1734.9,
+    "scores": {
+      "Ensemble": 0.74,
+      "XGBoost": 0.79,
+      "Isolation Forest": 0.57,
+      "Autoencoder": 0.72
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 248,
+    "tx_id": "TXN-CC-00249",
+    "timestamp": "2024-09-17 03:36:13",
+    "is_fraud": 0,
+    "amount": 492.77,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 249,
+    "tx_id": "TXN-CC-00250",
+    "timestamp": "2024-09-17 05:52:25",
+    "is_fraud": 0,
+    "amount": 76.34,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 250,
+    "tx_id": "TXN-CC-00251",
+    "timestamp": "2024-09-17 06:42:40",
+    "is_fraud": 0,
+    "amount": 104.42,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 251,
+    "tx_id": "TXN-CC-00252",
+    "timestamp": "2024-09-17 06:44:44",
+    "is_fraud": 0,
+    "amount": 496.01,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 252,
+    "tx_id": "TXN-CC-00253",
+    "timestamp": "2024-09-17 09:39:34",
+    "is_fraud": 0,
+    "amount": 331.21,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.35,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 253,
+    "tx_id": "TXN-CC-00254",
+    "timestamp": "2024-09-17 10:11:42",
+    "is_fraud": 0,
+    "amount": 1851.92,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 254,
+    "tx_id": "TXN-CC-00255",
+    "timestamp": "2024-09-17 10:14:48",
+    "is_fraud": 0,
+    "amount": 247.49,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 255,
+    "tx_id": "TXN-CC-00256",
+    "timestamp": "2024-09-17 11:11:56",
+    "is_fraud": 0,
+    "amount": 1276.99,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 256,
+    "tx_id": "TXN-CC-00257",
+    "timestamp": "2024-09-17 11:46:28",
+    "is_fraud": 0,
+    "amount": 529.76,
+    "scores": {
+      "Ensemble": 0.45,
+      "XGBoost": 0.23,
+      "Isolation Forest": 0.41,
+      "Autoencoder": 0.42
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "medium"
+  },
+  {
+    "index": 257,
+    "tx_id": "TXN-CC-00258",
+    "timestamp": "2024-09-17 11:53:40",
+    "is_fraud": 0,
+    "amount": 351.41,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 258,
+    "tx_id": "TXN-CC-00259",
+    "timestamp": "2024-09-17 12:59:07",
+    "is_fraud": 0,
+    "amount": 2711.26,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 259,
+    "tx_id": "TXN-CC-00260",
+    "timestamp": "2024-09-17 15:18:38",
+    "is_fraud": 0,
+    "amount": 14549.49,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 260,
+    "tx_id": "TXN-CC-00261",
+    "timestamp": "2024-09-17 15:20:01",
+    "is_fraud": 0,
+    "amount": 225.19,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 261,
+    "tx_id": "TXN-CC-00262",
+    "timestamp": "2024-09-17 16:52:08",
+    "is_fraud": 0,
+    "amount": 235.77,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 262,
+    "tx_id": "TXN-CC-00263",
+    "timestamp": "2024-09-17 18:28:22",
+    "is_fraud": 0,
+    "amount": 469.24,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 263,
+    "tx_id": "TXN-CC-00264",
+    "timestamp": "2024-09-17 19:12:51",
+    "is_fraud": 0,
+    "amount": 373.95,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 264,
+    "tx_id": "TXN-CC-00265",
+    "timestamp": "2024-09-17 20:02:58",
+    "is_fraud": 0,
+    "amount": 83.19,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 265,
+    "tx_id": "TXN-CC-00266",
+    "timestamp": "2024-09-17 21:18:24",
+    "is_fraud": 1,
+    "amount": 1460.7,
+    "scores": {
+      "Ensemble": 0.94,
+      "XGBoost": 0.88,
+      "Isolation Forest": 0.69,
+      "Autoencoder": 0.58
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 266,
+    "tx_id": "TXN-CC-00267",
+    "timestamp": "2024-09-17 22:54:02",
+    "is_fraud": 0,
+    "amount": 1161.59,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 267,
+    "tx_id": "TXN-CC-00268",
+    "timestamp": "2024-09-17 23:31:55",
+    "is_fraud": 0,
+    "amount": 337.17,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.35,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 268,
+    "tx_id": "TXN-CC-00269",
+    "timestamp": "2024-09-17 23:41:22",
+    "is_fraud": 0,
+    "amount": 435.96,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 269,
+    "tx_id": "TXN-CC-00270",
+    "timestamp": "2024-09-18 01:56:17",
+    "is_fraud": 1,
+    "amount": 1984.46,
+    "scores": {
+      "Ensemble": 0.78,
+      "XGBoost": 0.96,
+      "Isolation Forest": 0.48,
+      "Autoencoder": 0.87
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 270,
+    "tx_id": "TXN-CC-00271",
+    "timestamp": "2024-09-18 02:05:01",
+    "is_fraud": 0,
+    "amount": 171.79,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 271,
+    "tx_id": "TXN-CC-00272",
+    "timestamp": "2024-09-18 02:34:54",
+    "is_fraud": 0,
+    "amount": 1281.73,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 272,
+    "tx_id": "TXN-CC-00273",
+    "timestamp": "2024-09-18 03:06:10",
+    "is_fraud": 0,
+    "amount": 964.16,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 273,
+    "tx_id": "TXN-CC-00274",
+    "timestamp": "2024-09-18 03:10:45",
+    "is_fraud": 0,
+    "amount": 446.25,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 274,
+    "tx_id": "TXN-CC-00275",
+    "timestamp": "2024-09-18 03:30:40",
+    "is_fraud": 0,
+    "amount": 195.27,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 275,
+    "tx_id": "TXN-CC-00276",
+    "timestamp": "2024-09-18 04:27:53",
+    "is_fraud": 0,
+    "amount": 283.19,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 276,
+    "tx_id": "TXN-CC-00277",
+    "timestamp": "2024-09-18 04:56:51",
+    "is_fraud": 0,
+    "amount": 270.86,
+    "scores": {
+      "Ensemble": 0.47,
+      "XGBoost": 0.29,
+      "Isolation Forest": 0.55,
+      "Autoencoder": 0.24
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "medium"
+  },
+  {
+    "index": 277,
+    "tx_id": "TXN-CC-00278",
+    "timestamp": "2024-09-18 05:03:33",
+    "is_fraud": 0,
+    "amount": 107.04,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 278,
+    "tx_id": "TXN-CC-00279",
+    "timestamp": "2024-09-18 08:57:29",
+    "is_fraud": 0,
+    "amount": 1975.24,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.23,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 279,
+    "tx_id": "TXN-CC-00280",
+    "timestamp": "2024-09-18 10:50:44",
+    "is_fraud": 0,
+    "amount": 480.92,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 280,
+    "tx_id": "TXN-CC-00281",
+    "timestamp": "2024-09-18 10:58:59",
+    "is_fraud": 0,
+    "amount": 391.89,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 281,
+    "tx_id": "TXN-CC-00282",
+    "timestamp": "2024-09-18 12:58:12",
+    "is_fraud": 0,
+    "amount": 327.96,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 282,
+    "tx_id": "TXN-CC-00283",
+    "timestamp": "2024-09-18 13:31:15",
+    "is_fraud": 0,
+    "amount": 68.48,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 283,
+    "tx_id": "TXN-CC-00284",
+    "timestamp": "2024-09-18 14:50:22",
+    "is_fraud": 0,
+    "amount": 222.6,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 284,
+    "tx_id": "TXN-CC-00285",
+    "timestamp": "2024-09-18 16:59:36",
+    "is_fraud": 0,
+    "amount": 226.39,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 285,
+    "tx_id": "TXN-CC-00286",
+    "timestamp": "2024-09-18 19:54:44",
+    "is_fraud": 0,
+    "amount": 269.35,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 286,
+    "tx_id": "TXN-CC-00287",
+    "timestamp": "2024-09-18 21:46:59",
+    "is_fraud": 0,
+    "amount": 317.59,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 287,
+    "tx_id": "TXN-CC-00288",
+    "timestamp": "2024-09-18 22:07:24",
+    "is_fraud": 0,
+    "amount": 378.08,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 288,
+    "tx_id": "TXN-CC-00289",
+    "timestamp": "2024-09-19 02:19:24",
+    "is_fraud": 0,
+    "amount": 99.58,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 289,
+    "tx_id": "TXN-CC-00290",
+    "timestamp": "2024-09-19 02:44:57",
+    "is_fraud": 0,
+    "amount": 1613.73,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 290,
+    "tx_id": "TXN-CC-00291",
+    "timestamp": "2024-09-19 03:23:17",
+    "is_fraud": 0,
+    "amount": 108.44,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 291,
+    "tx_id": "TXN-CC-00292",
+    "timestamp": "2024-09-19 08:49:49",
+    "is_fraud": 0,
+    "amount": 1637.72,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 292,
+    "tx_id": "TXN-CC-00293",
+    "timestamp": "2024-09-19 12:57:45",
+    "is_fraud": 0,
+    "amount": 1409.12,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.02,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 293,
+    "tx_id": "TXN-CC-00294",
+    "timestamp": "2024-09-19 15:50:13",
+    "is_fraud": 0,
+    "amount": 412.51,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 294,
+    "tx_id": "TXN-CC-00295",
+    "timestamp": "2024-09-19 16:50:11",
+    "is_fraud": 0,
+    "amount": 110.2,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 295,
+    "tx_id": "TXN-CC-00296",
+    "timestamp": "2024-09-19 16:55:53",
+    "is_fraud": 0,
+    "amount": 884.68,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 296,
+    "tx_id": "TXN-CC-00297",
+    "timestamp": "2024-09-19 17:09:59",
+    "is_fraud": 0,
+    "amount": 1409.43,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 297,
+    "tx_id": "TXN-CC-00298",
+    "timestamp": "2024-09-19 18:58:03",
+    "is_fraud": 0,
+    "amount": 133.41,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 298,
+    "tx_id": "TXN-CC-00299",
+    "timestamp": "2024-09-19 21:23:42",
+    "is_fraud": 0,
+    "amount": 74.81,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 299,
+    "tx_id": "TXN-CC-00300",
+    "timestamp": "2024-09-19 22:48:04",
+    "is_fraud": 0,
+    "amount": 348.42,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 300,
+    "tx_id": "TXN-CC-00301",
+    "timestamp": "2024-09-19 23:16:33",
+    "is_fraud": 1,
+    "amount": 604.03,
+    "scores": {
+      "Ensemble": 0.86,
+      "XGBoost": 0.74,
+      "Isolation Forest": 0.61,
+      "Autoencoder": 0.63
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 301,
+    "tx_id": "TXN-CC-00302",
+    "timestamp": "2024-09-19 23:30:39",
+    "is_fraud": 0,
+    "amount": 30.73,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 302,
+    "tx_id": "TXN-CC-00303",
+    "timestamp": "2024-09-20 00:36:55",
+    "is_fraud": 1,
+    "amount": 492.56,
+    "scores": {
+      "Ensemble": 0.84,
+      "XGBoost": 0.92,
+      "Isolation Forest": 0.5,
+      "Autoencoder": 0.86
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 303,
+    "tx_id": "TXN-CC-00304",
+    "timestamp": "2024-09-20 00:41:55",
+    "is_fraud": 0,
+    "amount": 250.25,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 304,
+    "tx_id": "TXN-CC-00305",
+    "timestamp": "2024-09-20 00:49:47",
+    "is_fraud": 1,
+    "amount": 1394.86,
+    "scores": {
+      "Ensemble": 0.94,
+      "XGBoost": 0.88,
+      "Isolation Forest": 0.87,
+      "Autoencoder": 0.86
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 305,
+    "tx_id": "TXN-CC-00306",
+    "timestamp": "2024-09-20 03:38:44",
+    "is_fraud": 1,
+    "amount": 100.6,
+    "scores": {
+      "Ensemble": 0.85,
+      "XGBoost": 0.94,
+      "Isolation Forest": 0.57,
+      "Autoencoder": 0.56
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 306,
+    "tx_id": "TXN-CC-00307",
+    "timestamp": "2024-09-20 03:46:11",
+    "is_fraud": 0,
+    "amount": 224.71,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 307,
+    "tx_id": "TXN-CC-00308",
+    "timestamp": "2024-09-20 04:11:55",
+    "is_fraud": 0,
+    "amount": 758.15,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 308,
+    "tx_id": "TXN-CC-00309",
+    "timestamp": "2024-09-20 04:18:27",
+    "is_fraud": 1,
+    "amount": 662.42,
+    "scores": {
+      "Ensemble": 0.93,
+      "XGBoost": 0.9,
+      "Isolation Forest": 0.48,
+      "Autoencoder": 0.7
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 309,
+    "tx_id": "TXN-CC-00310",
+    "timestamp": "2024-09-20 04:34:02",
+    "is_fraud": 0,
+    "amount": 46.05,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 310,
+    "tx_id": "TXN-CC-00311",
+    "timestamp": "2024-09-20 10:04:53",
+    "is_fraud": 0,
+    "amount": 59.52,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 311,
+    "tx_id": "TXN-CC-00312",
+    "timestamp": "2024-09-20 11:46:52",
+    "is_fraud": 0,
+    "amount": 1917.55,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 312,
+    "tx_id": "TXN-CC-00313",
+    "timestamp": "2024-09-20 12:29:18",
+    "is_fraud": 0,
+    "amount": 13506.43,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 313,
+    "tx_id": "TXN-CC-00314",
+    "timestamp": "2024-09-20 14:14:30",
+    "is_fraud": 0,
+    "amount": 302.98,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 314,
+    "tx_id": "TXN-CC-00315",
+    "timestamp": "2024-09-20 15:29:01",
+    "is_fraud": 0,
+    "amount": 480.04,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.23,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 315,
+    "tx_id": "TXN-CC-00316",
+    "timestamp": "2024-09-20 15:34:50",
+    "is_fraud": 0,
+    "amount": 129.43,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 316,
+    "tx_id": "TXN-CC-00317",
+    "timestamp": "2024-09-20 15:54:03",
+    "is_fraud": 0,
+    "amount": 165.32,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 317,
+    "tx_id": "TXN-CC-00318",
+    "timestamp": "2024-09-20 16:03:09",
+    "is_fraud": 0,
+    "amount": 174.59,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 318,
+    "tx_id": "TXN-CC-00319",
+    "timestamp": "2024-09-20 17:05:12",
+    "is_fraud": 0,
+    "amount": 1016.65,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 319,
+    "tx_id": "TXN-CC-00320",
+    "timestamp": "2024-09-20 18:11:37",
+    "is_fraud": 0,
+    "amount": 253.91,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 320,
+    "tx_id": "TXN-CC-00321",
+    "timestamp": "2024-09-20 18:56:36",
+    "is_fraud": 0,
+    "amount": 385.2,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.05,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 321,
+    "tx_id": "TXN-CC-00322",
+    "timestamp": "2024-09-20 19:21:39",
+    "is_fraud": 0,
+    "amount": 414.03,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 322,
+    "tx_id": "TXN-CC-00323",
+    "timestamp": "2024-09-20 19:58:54",
+    "is_fraud": 0,
+    "amount": 496.82,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 323,
+    "tx_id": "TXN-CC-00324",
+    "timestamp": "2024-09-20 20:12:48",
+    "is_fraud": 0,
+    "amount": 68.64,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 324,
+    "tx_id": "TXN-CC-00325",
+    "timestamp": "2024-09-20 21:28:56",
+    "is_fraud": 0,
+    "amount": 296.03,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 325,
+    "tx_id": "TXN-CC-00326",
+    "timestamp": "2024-09-20 22:59:16",
+    "is_fraud": 1,
+    "amount": 274.31,
+    "scores": {
+      "Ensemble": 0.68,
+      "XGBoost": 0.87,
+      "Isolation Forest": 0.92,
+      "Autoencoder": 0.75
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "medium"
+  },
+  {
+    "index": 326,
+    "tx_id": "TXN-CC-00327",
+    "timestamp": "2024-09-21 00:58:20",
+    "is_fraud": 0,
+    "amount": 92.29,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 327,
+    "tx_id": "TXN-CC-00328",
+    "timestamp": "2024-09-21 02:12:54",
+    "is_fraud": 0,
+    "amount": 312.87,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.05,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 328,
+    "tx_id": "TXN-CC-00329",
+    "timestamp": "2024-09-21 02:32:05",
+    "is_fraud": 0,
+    "amount": 150.41,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 329,
+    "tx_id": "TXN-CC-00330",
+    "timestamp": "2024-09-21 03:35:52",
+    "is_fraud": 0,
+    "amount": 315.48,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 330,
+    "tx_id": "TXN-CC-00331",
+    "timestamp": "2024-09-21 10:35:13",
+    "is_fraud": 0,
+    "amount": 1245.81,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.23,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 331,
+    "tx_id": "TXN-CC-00332",
+    "timestamp": "2024-09-21 12:27:24",
+    "is_fraud": 0,
+    "amount": 538.62,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 332,
+    "tx_id": "TXN-CC-00333",
+    "timestamp": "2024-09-21 13:22:41",
+    "is_fraud": 0,
+    "amount": 328.83,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 333,
+    "tx_id": "TXN-CC-00334",
+    "timestamp": "2024-09-21 14:53:24",
+    "is_fraud": 0,
+    "amount": 332.25,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 334,
+    "tx_id": "TXN-CC-00335",
+    "timestamp": "2024-09-21 15:45:44",
+    "is_fraud": 0,
+    "amount": 1257.75,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 335,
+    "tx_id": "TXN-CC-00336",
+    "timestamp": "2024-09-21 17:19:26",
+    "is_fraud": 0,
+    "amount": 1162.62,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 336,
+    "tx_id": "TXN-CC-00337",
+    "timestamp": "2024-09-21 18:50:11",
+    "is_fraud": 0,
+    "amount": 330.57,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 337,
+    "tx_id": "TXN-CC-00338",
+    "timestamp": "2024-09-21 19:31:29",
+    "is_fraud": 0,
+    "amount": 1795.16,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 338,
+    "tx_id": "TXN-CC-00339",
+    "timestamp": "2024-09-21 19:48:31",
+    "is_fraud": 0,
+    "amount": 69.03,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 339,
+    "tx_id": "TXN-CC-00340",
+    "timestamp": "2024-09-21 20:00:37",
+    "is_fraud": 0,
+    "amount": 363.54,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 340,
+    "tx_id": "TXN-CC-00341",
+    "timestamp": "2024-09-21 21:23:05",
+    "is_fraud": 0,
+    "amount": 82,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 341,
+    "tx_id": "TXN-CC-00342",
+    "timestamp": "2024-09-21 22:20:44",
+    "is_fraud": 0,
+    "amount": 1071.67,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 342,
+    "tx_id": "TXN-CC-00343",
+    "timestamp": "2024-09-21 22:59:11",
+    "is_fraud": 1,
+    "amount": 7657.7,
+    "scores": {
+      "Ensemble": 0.88,
+      "XGBoost": 0.82,
+      "Isolation Forest": 0.88,
+      "Autoencoder": 0.78
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 343,
+    "tx_id": "TXN-CC-00344",
+    "timestamp": "2024-09-22 00:26:17",
+    "is_fraud": 0,
+    "amount": 1836.1,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 344,
+    "tx_id": "TXN-CC-00345",
+    "timestamp": "2024-09-22 01:42:14",
+    "is_fraud": 0,
+    "amount": 90.29,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 345,
+    "tx_id": "TXN-CC-00346",
+    "timestamp": "2024-09-22 01:58:46",
+    "is_fraud": 0,
+    "amount": 103.89,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 346,
+    "tx_id": "TXN-CC-00347",
+    "timestamp": "2024-09-22 02:09:11",
+    "is_fraud": 0,
+    "amount": 221.38,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 347,
+    "tx_id": "TXN-CC-00348",
+    "timestamp": "2024-09-22 02:59:22",
+    "is_fraud": 0,
+    "amount": 262.25,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 348,
+    "tx_id": "TXN-CC-00349",
+    "timestamp": "2024-09-22 03:35:05",
+    "is_fraud": 0,
+    "amount": 498.18,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 349,
+    "tx_id": "TXN-CC-00350",
+    "timestamp": "2024-09-22 04:01:08",
+    "is_fraud": 0,
+    "amount": 1278.48,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 350,
+    "tx_id": "TXN-CC-00351",
+    "timestamp": "2024-09-22 04:47:00",
+    "is_fraud": 0,
+    "amount": 113.21,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 351,
+    "tx_id": "TXN-CC-00352",
+    "timestamp": "2024-09-22 12:07:01",
+    "is_fraud": 0,
+    "amount": 942.33,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 352,
+    "tx_id": "TXN-CC-00353",
+    "timestamp": "2024-09-22 12:59:10",
+    "is_fraud": 0,
+    "amount": 176.94,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 353,
+    "tx_id": "TXN-CC-00354",
+    "timestamp": "2024-09-22 13:47:00",
+    "is_fraud": 0,
+    "amount": 330.78,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 354,
+    "tx_id": "TXN-CC-00355",
+    "timestamp": "2024-09-22 13:51:01",
+    "is_fraud": 0,
+    "amount": 183.06,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 355,
+    "tx_id": "TXN-CC-00356",
+    "timestamp": "2024-09-22 15:05:32",
+    "is_fraud": 0,
+    "amount": 603.09,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 356,
+    "tx_id": "TXN-CC-00357",
+    "timestamp": "2024-09-22 16:07:46",
+    "is_fraud": 0,
+    "amount": 488.44,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 357,
+    "tx_id": "TXN-CC-00358",
+    "timestamp": "2024-09-22 16:22:43",
+    "is_fraud": 0,
+    "amount": 227.81,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.35,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 358,
+    "tx_id": "TXN-CC-00359",
+    "timestamp": "2024-09-22 16:26:58",
+    "is_fraud": 0,
+    "amount": 194.38,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 359,
+    "tx_id": "TXN-CC-00360",
+    "timestamp": "2024-09-22 19:35:10",
+    "is_fraud": 0,
+    "amount": 124.59,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 360,
+    "tx_id": "TXN-CC-00361",
+    "timestamp": "2024-09-22 22:57:44",
+    "is_fraud": 0,
+    "amount": 1850.78,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 361,
+    "tx_id": "TXN-CC-00362",
+    "timestamp": "2024-09-22 23:05:05",
+    "is_fraud": 0,
+    "amount": 428.84,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 362,
+    "tx_id": "TXN-CC-00363",
+    "timestamp": "2024-09-22 23:25:45",
+    "is_fraud": 0,
+    "amount": 650.41,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 363,
+    "tx_id": "TXN-CC-00364",
+    "timestamp": "2024-09-22 23:57:50",
+    "is_fraud": 0,
+    "amount": 1694.82,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 364,
+    "tx_id": "TXN-CC-00365",
+    "timestamp": "2024-09-23 01:45:39",
+    "is_fraud": 0,
+    "amount": 1129.16,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 365,
+    "tx_id": "TXN-CC-00366",
+    "timestamp": "2024-09-23 02:28:11",
+    "is_fraud": 0,
+    "amount": 770.15,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 366,
+    "tx_id": "TXN-CC-00367",
+    "timestamp": "2024-09-23 02:36:37",
+    "is_fraud": 0,
+    "amount": 5463.54,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 367,
+    "tx_id": "TXN-CC-00368",
+    "timestamp": "2024-09-23 07:17:13",
+    "is_fraud": 1,
+    "amount": 1125.83,
+    "scores": {
+      "Ensemble": 0.92,
+      "XGBoost": 0.79,
+      "Isolation Forest": 0.69,
+      "Autoencoder": 0.57
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 368,
+    "tx_id": "TXN-CC-00369",
+    "timestamp": "2024-09-23 07:50:16",
+    "is_fraud": 0,
+    "amount": 439.23,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 369,
+    "tx_id": "TXN-CC-00370",
+    "timestamp": "2024-09-23 09:08:13",
+    "is_fraud": 0,
+    "amount": 566.57,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 370,
+    "tx_id": "TXN-CC-00371",
+    "timestamp": "2024-09-23 09:30:24",
+    "is_fraud": 0,
+    "amount": 488.08,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 371,
+    "tx_id": "TXN-CC-00372",
+    "timestamp": "2024-09-23 10:05:48",
+    "is_fraud": 0,
+    "amount": 386.09,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 372,
+    "tx_id": "TXN-CC-00373",
+    "timestamp": "2024-09-23 10:15:52",
+    "is_fraud": 0,
+    "amount": 33.77,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 373,
+    "tx_id": "TXN-CC-00374",
+    "timestamp": "2024-09-23 13:40:20",
+    "is_fraud": 0,
+    "amount": 299.66,
+    "scores": {
+      "Ensemble": 0.44,
+      "XGBoost": 0.27,
+      "Isolation Forest": 0.36,
+      "Autoencoder": 0.41
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "medium"
+  },
+  {
+    "index": 374,
+    "tx_id": "TXN-CC-00375",
+    "timestamp": "2024-09-23 14:39:16",
+    "is_fraud": 0,
+    "amount": 212.46,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 375,
+    "tx_id": "TXN-CC-00376",
+    "timestamp": "2024-09-23 14:39:26",
+    "is_fraud": 0,
+    "amount": 263.93,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 376,
+    "tx_id": "TXN-CC-00377",
+    "timestamp": "2024-09-23 15:37:57",
+    "is_fraud": 0,
+    "amount": 492.45,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.23,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 377,
+    "tx_id": "TXN-CC-00378",
+    "timestamp": "2024-09-23 19:00:35",
+    "is_fraud": 0,
+    "amount": 44.95,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 378,
+    "tx_id": "TXN-CC-00379",
+    "timestamp": "2024-09-23 22:16:23",
+    "is_fraud": 0,
+    "amount": 80.85,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 379,
+    "tx_id": "TXN-CC-00380",
+    "timestamp": "2024-09-23 22:26:56",
+    "is_fraud": 0,
+    "amount": 140.04,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 380,
+    "tx_id": "TXN-CC-00381",
+    "timestamp": "2024-09-23 23:13:54",
+    "is_fraud": 1,
+    "amount": 1874.7,
+    "scores": {
+      "Ensemble": 0.9,
+      "XGBoost": 0.72,
+      "Isolation Forest": 0.91,
+      "Autoencoder": 0.94
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 381,
+    "tx_id": "TXN-CC-00382",
+    "timestamp": "2024-09-24 00:28:29",
+    "is_fraud": 0,
+    "amount": 448.37,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 382,
+    "tx_id": "TXN-CC-00383",
+    "timestamp": "2024-09-24 01:59:56",
+    "is_fraud": 0,
+    "amount": 309.62,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 383,
+    "tx_id": "TXN-CC-00384",
+    "timestamp": "2024-09-24 02:32:17",
+    "is_fraud": 0,
+    "amount": 672.3,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 384,
+    "tx_id": "TXN-CC-00385",
+    "timestamp": "2024-09-24 03:49:46",
+    "is_fraud": 0,
+    "amount": 518.81,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 385,
+    "tx_id": "TXN-CC-00386",
+    "timestamp": "2024-09-24 07:13:06",
+    "is_fraud": 0,
+    "amount": 259.88,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 386,
+    "tx_id": "TXN-CC-00387",
+    "timestamp": "2024-09-24 08:18:53",
+    "is_fraud": 0,
+    "amount": 101.91,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 387,
+    "tx_id": "TXN-CC-00388",
+    "timestamp": "2024-09-24 09:04:50",
+    "is_fraud": 0,
+    "amount": 1596.78,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 388,
+    "tx_id": "TXN-CC-00389",
+    "timestamp": "2024-09-24 10:27:20",
+    "is_fraud": 0,
+    "amount": 968.69,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 389,
+    "tx_id": "TXN-CC-00390",
+    "timestamp": "2024-09-24 10:36:02",
+    "is_fraud": 0,
+    "amount": 373.32,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 390,
+    "tx_id": "TXN-CC-00391",
+    "timestamp": "2024-09-24 11:34:00",
+    "is_fraud": 0,
+    "amount": 1437.85,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.01
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 391,
+    "tx_id": "TXN-CC-00392",
+    "timestamp": "2024-09-24 13:27:13",
+    "is_fraud": 0,
+    "amount": 451.89,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 392,
+    "tx_id": "TXN-CC-00393",
+    "timestamp": "2024-09-24 13:31:09",
+    "is_fraud": 0,
+    "amount": 227.54,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.35,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 393,
+    "tx_id": "TXN-CC-00394",
+    "timestamp": "2024-09-24 13:56:55",
+    "is_fraud": 0,
+    "amount": 213.43,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 394,
+    "tx_id": "TXN-CC-00395",
+    "timestamp": "2024-09-24 15:24:14",
+    "is_fraud": 0,
+    "amount": 1290.34,
+    "scores": {
+      "Ensemble": 0.2,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 395,
+    "tx_id": "TXN-CC-00396",
+    "timestamp": "2024-09-24 16:49:38",
+    "is_fraud": 0,
+    "amount": 54.66,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 396,
+    "tx_id": "TXN-CC-00397",
+    "timestamp": "2024-09-24 18:34:53",
+    "is_fraud": 0,
+    "amount": 999.46,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 397,
+    "tx_id": "TXN-CC-00398",
+    "timestamp": "2024-09-24 23:42:23",
+    "is_fraud": 0,
+    "amount": 238.66,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 398,
+    "tx_id": "TXN-CC-00399",
+    "timestamp": "2024-09-24 23:49:25",
+    "is_fraud": 0,
+    "amount": 10.45,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 399,
+    "tx_id": "TXN-CC-00400",
+    "timestamp": "2024-09-24 23:58:55",
+    "is_fraud": 0,
+    "amount": 313.39,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 400,
+    "tx_id": "TXN-CC-00401",
+    "timestamp": "2024-09-25 02:25:10",
+    "is_fraud": 0,
+    "amount": 113.57,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 401,
+    "tx_id": "TXN-CC-00402",
+    "timestamp": "2024-09-25 07:53:42",
+    "is_fraud": 0,
+    "amount": 57.16,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 402,
+    "tx_id": "TXN-CC-00403",
+    "timestamp": "2024-09-25 08:48:37",
+    "is_fraud": 1,
+    "amount": 1419.19,
+    "scores": {
+      "Ensemble": 0.77,
+      "XGBoost": 0.88,
+      "Isolation Forest": 0.78,
+      "Autoencoder": 0.7
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 403,
+    "tx_id": "TXN-CC-00404",
+    "timestamp": "2024-09-25 09:52:19",
+    "is_fraud": 0,
+    "amount": 402.26,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 404,
+    "tx_id": "TXN-CC-00405",
+    "timestamp": "2024-09-25 11:01:09",
+    "is_fraud": 1,
+    "amount": 13481.8,
+    "scores": {
+      "Ensemble": 0.72,
+      "XGBoost": 0.71,
+      "Isolation Forest": 0.9,
+      "Autoencoder": 0.88
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 405,
+    "tx_id": "TXN-CC-00406",
+    "timestamp": "2024-09-25 12:04:23",
+    "is_fraud": 0,
+    "amount": 275.06,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 406,
+    "tx_id": "TXN-CC-00407",
+    "timestamp": "2024-09-25 13:14:35",
+    "is_fraud": 0,
+    "amount": 210.35,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 407,
+    "tx_id": "TXN-CC-00408",
+    "timestamp": "2024-09-25 15:11:15",
+    "is_fraud": 0,
+    "amount": 1564.89,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 408,
+    "tx_id": "TXN-CC-00409",
+    "timestamp": "2024-09-25 18:30:22",
+    "is_fraud": 0,
+    "amount": 11238.05,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 409,
+    "tx_id": "TXN-CC-00410",
+    "timestamp": "2024-09-25 18:59:21",
+    "is_fraud": 0,
+    "amount": 105.46,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 410,
+    "tx_id": "TXN-CC-00411",
+    "timestamp": "2024-09-25 21:23:57",
+    "is_fraud": 0,
+    "amount": 304.73,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 411,
+    "tx_id": "TXN-CC-00412",
+    "timestamp": "2024-09-25 22:47:33",
+    "is_fraud": 0,
+    "amount": 489.28,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.05,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 412,
+    "tx_id": "TXN-CC-00413",
+    "timestamp": "2024-09-25 22:49:32",
+    "is_fraud": 0,
+    "amount": 471.08,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 413,
+    "tx_id": "TXN-CC-00414",
+    "timestamp": "2024-09-26 00:03:44",
+    "is_fraud": 1,
+    "amount": 173.69,
+    "scores": {
+      "Ensemble": 0.77,
+      "XGBoost": 0.79,
+      "Isolation Forest": 0.54,
+      "Autoencoder": 0.57
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 414,
+    "tx_id": "TXN-CC-00415",
+    "timestamp": "2024-09-26 00:15:21",
+    "is_fraud": 1,
+    "amount": 66.83,
+    "scores": {
+      "Ensemble": 0.72,
+      "XGBoost": 0.73,
+      "Isolation Forest": 0.72,
+      "Autoencoder": 0.79
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 415,
+    "tx_id": "TXN-CC-00416",
+    "timestamp": "2024-09-26 01:16:11",
+    "is_fraud": 0,
+    "amount": 464.26,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 416,
+    "tx_id": "TXN-CC-00417",
+    "timestamp": "2024-09-26 01:45:01",
+    "is_fraud": 1,
+    "amount": 138.95,
+    "scores": {
+      "Ensemble": 0.74,
+      "XGBoost": 0.91,
+      "Isolation Forest": 0.45,
+      "Autoencoder": 0.85
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 417,
+    "tx_id": "TXN-CC-00418",
+    "timestamp": "2024-09-26 03:55:36",
+    "is_fraud": 0,
+    "amount": 2430.13,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 418,
+    "tx_id": "TXN-CC-00419",
+    "timestamp": "2024-09-26 04:26:54",
+    "is_fraud": 0,
+    "amount": 189.94,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 419,
+    "tx_id": "TXN-CC-00420",
+    "timestamp": "2024-09-26 04:30:17",
+    "is_fraud": 0,
+    "amount": 264.2,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 420,
+    "tx_id": "TXN-CC-00421",
+    "timestamp": "2024-09-26 06:12:55",
+    "is_fraud": 0,
+    "amount": 8186.53,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 421,
+    "tx_id": "TXN-CC-00422",
+    "timestamp": "2024-09-26 06:21:43",
+    "is_fraud": 0,
+    "amount": 109.87,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 422,
+    "tx_id": "TXN-CC-00423",
+    "timestamp": "2024-09-26 08:06:46",
+    "is_fraud": 0,
+    "amount": 408.96,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.35,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 423,
+    "tx_id": "TXN-CC-00424",
+    "timestamp": "2024-09-26 08:15:29",
+    "is_fraud": 0,
+    "amount": 234,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 424,
+    "tx_id": "TXN-CC-00425",
+    "timestamp": "2024-09-26 10:17:27",
+    "is_fraud": 0,
+    "amount": 278.06,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 425,
+    "tx_id": "TXN-CC-00426",
+    "timestamp": "2024-09-26 12:54:57",
+    "is_fraud": 0,
+    "amount": 98.63,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 426,
+    "tx_id": "TXN-CC-00427",
+    "timestamp": "2024-09-26 13:22:26",
+    "is_fraud": 0,
+    "amount": 300.17,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 427,
+    "tx_id": "TXN-CC-00428",
+    "timestamp": "2024-09-26 15:00:40",
+    "is_fraud": 0,
+    "amount": 67.53,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 428,
+    "tx_id": "TXN-CC-00429",
+    "timestamp": "2024-09-26 17:59:13",
+    "is_fraud": 0,
+    "amount": 238.19,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.15,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 429,
+    "tx_id": "TXN-CC-00430",
+    "timestamp": "2024-09-26 18:16:14",
+    "is_fraud": 0,
+    "amount": 326.58,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.06,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 430,
+    "tx_id": "TXN-CC-00431",
+    "timestamp": "2024-09-26 20:40:45",
+    "is_fraud": 0,
+    "amount": 12969.34,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.23,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 431,
+    "tx_id": "TXN-CC-00432",
+    "timestamp": "2024-09-26 22:01:51",
+    "is_fraud": 0,
+    "amount": 99.28,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 432,
+    "tx_id": "TXN-CC-00433",
+    "timestamp": "2024-09-27 00:47:16",
+    "is_fraud": 0,
+    "amount": 780.26,
+    "scores": {
+      "Ensemble": 0.25,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 433,
+    "tx_id": "TXN-CC-00434",
+    "timestamp": "2024-09-27 00:51:31",
+    "is_fraud": 0,
+    "amount": 73.86,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.06
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 434,
+    "tx_id": "TXN-CC-00435",
+    "timestamp": "2024-09-27 01:29:40",
+    "is_fraud": 0,
+    "amount": 1126.07,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.34,
+      "Autoencoder": 0.2
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 435,
+    "tx_id": "TXN-CC-00436",
+    "timestamp": "2024-09-27 01:43:38",
+    "is_fraud": 0,
+    "amount": 6589.88,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 436,
+    "tx_id": "TXN-CC-00437",
+    "timestamp": "2024-09-27 05:25:03",
+    "is_fraud": 0,
+    "amount": 356.47,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 437,
+    "tx_id": "TXN-CC-00438",
+    "timestamp": "2024-09-27 07:07:10",
+    "is_fraud": 0,
+    "amount": 599.79,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 438,
+    "tx_id": "TXN-CC-00439",
+    "timestamp": "2024-09-27 08:11:42",
+    "is_fraud": 0,
+    "amount": 10333.4,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.23,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 439,
+    "tx_id": "TXN-CC-00440",
+    "timestamp": "2024-09-27 08:40:39",
+    "is_fraud": 0,
+    "amount": 234.96,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 440,
+    "tx_id": "TXN-CC-00441",
+    "timestamp": "2024-09-27 09:14:23",
+    "is_fraud": 0,
+    "amount": 363.84,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 441,
+    "tx_id": "TXN-CC-00442",
+    "timestamp": "2024-09-27 10:58:45",
+    "is_fraud": 0,
+    "amount": 123.33,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 442,
+    "tx_id": "TXN-CC-00443",
+    "timestamp": "2024-09-27 13:43:52",
+    "is_fraud": 0,
+    "amount": 828.73,
+    "scores": {
+      "Ensemble": 0.01,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 443,
+    "tx_id": "TXN-CC-00444",
+    "timestamp": "2024-09-27 14:06:56",
+    "is_fraud": 0,
+    "amount": 4749.75,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 444,
+    "tx_id": "TXN-CC-00445",
+    "timestamp": "2024-09-27 14:17:06",
+    "is_fraud": 0,
+    "amount": 96.12,
+    "scores": {
+      "Ensemble": 0.21,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 445,
+    "tx_id": "TXN-CC-00446",
+    "timestamp": "2024-09-27 15:54:36",
+    "is_fraud": 0,
+    "amount": 389.02,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.23,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 446,
+    "tx_id": "TXN-CC-00447",
+    "timestamp": "2024-09-27 16:07:47",
+    "is_fraud": 0,
+    "amount": 445.44,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 447,
+    "tx_id": "TXN-CC-00448",
+    "timestamp": "2024-09-27 18:00:10",
+    "is_fraud": 0,
+    "amount": 177.12,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 448,
+    "tx_id": "TXN-CC-00449",
+    "timestamp": "2024-09-27 20:57:48",
+    "is_fraud": 1,
+    "amount": 10904.57,
+    "scores": {
+      "Ensemble": 0.92,
+      "XGBoost": 0.88,
+      "Isolation Forest": 0.52,
+      "Autoencoder": 0.59
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 449,
+    "tx_id": "TXN-CC-00450",
+    "timestamp": "2024-09-27 21:06:28",
+    "is_fraud": 0,
+    "amount": 18.83,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 450,
+    "tx_id": "TXN-CC-00451",
+    "timestamp": "2024-09-27 23:19:48",
+    "is_fraud": 0,
+    "amount": 282.28,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.15,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 451,
+    "tx_id": "TXN-CC-00452",
+    "timestamp": "2024-09-27 23:44:39",
+    "is_fraud": 0,
+    "amount": 209.63,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 452,
+    "tx_id": "TXN-CC-00453",
+    "timestamp": "2024-09-28 00:55:53",
+    "is_fraud": 0,
+    "amount": 116.34,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.04,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 453,
+    "tx_id": "TXN-CC-00454",
+    "timestamp": "2024-09-28 01:27:10",
+    "is_fraud": 0,
+    "amount": 493.87,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.1,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 454,
+    "tx_id": "TXN-CC-00455",
+    "timestamp": "2024-09-28 01:33:47",
+    "is_fraud": 0,
+    "amount": 1236.76,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.11,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 455,
+    "tx_id": "TXN-CC-00456",
+    "timestamp": "2024-09-28 02:03:07",
+    "is_fraud": 0,
+    "amount": 918.47,
+    "scores": {
+      "Ensemble": 0.1,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 456,
+    "tx_id": "TXN-CC-00457",
+    "timestamp": "2024-09-28 04:14:08",
+    "is_fraud": 0,
+    "amount": 1040.91,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.24,
+      "Autoencoder": 0.05
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 457,
+    "tx_id": "TXN-CC-00458",
+    "timestamp": "2024-09-28 04:44:40",
+    "is_fraud": 0,
+    "amount": 37.03,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 458,
+    "tx_id": "TXN-CC-00459",
+    "timestamp": "2024-09-28 05:24:07",
+    "is_fraud": 1,
+    "amount": 706.21,
+    "scores": {
+      "Ensemble": 0.85,
+      "XGBoost": 0.7,
+      "Isolation Forest": 0.71,
+      "Autoencoder": 0.7
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 459,
+    "tx_id": "TXN-CC-00460",
+    "timestamp": "2024-09-28 08:38:19",
+    "is_fraud": 0,
+    "amount": 12011.74,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 460,
+    "tx_id": "TXN-CC-00461",
+    "timestamp": "2024-09-28 11:32:01",
+    "is_fraud": 0,
+    "amount": 200.38,
+    "scores": {
+      "Ensemble": 0.22,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.08,
+      "Autoencoder": 0.2
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 461,
+    "tx_id": "TXN-CC-00462",
+    "timestamp": "2024-09-28 11:54:05",
+    "is_fraud": 0,
+    "amount": 444.81,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.21,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 462,
+    "tx_id": "TXN-CC-00463",
+    "timestamp": "2024-09-28 11:58:09",
+    "is_fraud": 1,
+    "amount": 693.79,
+    "scores": {
+      "Ensemble": 0.83,
+      "XGBoost": 0.73,
+      "Isolation Forest": 0.77,
+      "Autoencoder": 0.87
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 463,
+    "tx_id": "TXN-CC-00464",
+    "timestamp": "2024-09-28 12:07:46",
+    "is_fraud": 0,
+    "amount": 228.23,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 464,
+    "tx_id": "TXN-CC-00465",
+    "timestamp": "2024-09-28 12:27:09",
+    "is_fraud": 0,
+    "amount": 424.2,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.17,
+      "Autoencoder": 0.19
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 465,
+    "tx_id": "TXN-CC-00466",
+    "timestamp": "2024-09-28 16:09:37",
+    "is_fraud": 0,
+    "amount": 11557.57,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 466,
+    "tx_id": "TXN-CC-00467",
+    "timestamp": "2024-09-28 19:36:04",
+    "is_fraud": 0,
+    "amount": 353.27,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.19,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 467,
+    "tx_id": "TXN-CC-00468",
+    "timestamp": "2024-09-28 19:47:45",
+    "is_fraud": 0,
+    "amount": 229.37,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.07,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 468,
+    "tx_id": "TXN-CC-00469",
+    "timestamp": "2024-09-28 20:36:13",
+    "is_fraud": 0,
+    "amount": 550.19,
+    "scores": {
+      "Ensemble": 0.19,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.2,
+      "Autoencoder": 0.16
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 469,
+    "tx_id": "TXN-CC-00470",
+    "timestamp": "2024-09-28 21:27:39",
+    "is_fraud": 0,
+    "amount": 385.49,
+    "scores": {
+      "Ensemble": 0.04,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.04,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 470,
+    "tx_id": "TXN-CC-00471",
+    "timestamp": "2024-09-28 22:11:22",
+    "is_fraud": 1,
+    "amount": 998.58,
+    "scores": {
+      "Ensemble": 0.67,
+      "XGBoost": 0.96,
+      "Isolation Forest": 0.69,
+      "Autoencoder": 0.52
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "medium"
+  },
+  {
+    "index": 471,
+    "tx_id": "TXN-CC-00472",
+    "timestamp": "2024-09-28 22:12:19",
+    "is_fraud": 0,
+    "amount": 252.7,
+    "scores": {
+      "Ensemble": 0.03,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.13,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 472,
+    "tx_id": "TXN-CC-00473",
+    "timestamp": "2024-09-28 22:44:19",
+    "is_fraud": 0,
+    "amount": 214.19,
+    "scores": {
+      "Ensemble": 0.24,
+      "XGBoost": 0.01,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 473,
+    "tx_id": "TXN-CC-00474",
+    "timestamp": "2024-09-29 03:48:12",
+    "is_fraud": 0,
+    "amount": 13836.1,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 474,
+    "tx_id": "TXN-CC-00475",
+    "timestamp": "2024-09-29 04:27:05",
+    "is_fraud": 0,
+    "amount": 37.93,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 475,
+    "tx_id": "TXN-CC-00476",
+    "timestamp": "2024-09-29 05:35:03",
+    "is_fraud": 0,
+    "amount": 1737.03,
+    "scores": {
+      "Ensemble": 0.13,
+      "XGBoost": 0.05,
+      "Isolation Forest": 0.1,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 476,
+    "tx_id": "TXN-CC-00477",
+    "timestamp": "2024-09-29 06:04:55",
+    "is_fraud": 0,
+    "amount": 310.32,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.16,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 477,
+    "tx_id": "TXN-CC-00478",
+    "timestamp": "2024-09-29 06:18:02",
+    "is_fraud": 0,
+    "amount": 79.08,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.22,
+      "Autoencoder": 0.03
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 478,
+    "tx_id": "TXN-CC-00479",
+    "timestamp": "2024-09-29 06:42:10",
+    "is_fraud": 0,
+    "amount": 88.25,
+    "scores": {
+      "Ensemble": 0.05,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.32,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 479,
+    "tx_id": "TXN-CC-00480",
+    "timestamp": "2024-09-29 07:36:06",
+    "is_fraud": 0,
+    "amount": 10875.78,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 480,
+    "tx_id": "TXN-CC-00481",
+    "timestamp": "2024-09-29 07:52:07",
+    "is_fraud": 0,
+    "amount": 1430.89,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.18,
+      "Autoencoder": 0.14
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 481,
+    "tx_id": "TXN-CC-00482",
+    "timestamp": "2024-09-29 08:05:47",
+    "is_fraud": 1,
+    "amount": 1467.34,
+    "scores": {
+      "Ensemble": 0.84,
+      "XGBoost": 0.77,
+      "Isolation Forest": 0.65,
+      "Autoencoder": 0.54
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 482,
+    "tx_id": "TXN-CC-00483",
+    "timestamp": "2024-09-29 09:56:44",
+    "is_fraud": 0,
+    "amount": 1819.4,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.14,
+      "Autoencoder": 0.02
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 483,
+    "tx_id": "TXN-CC-00484",
+    "timestamp": "2024-09-29 12:50:14",
+    "is_fraud": 0,
+    "amount": 237.3,
+    "scores": {
+      "Ensemble": 0.18,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 484,
+    "tx_id": "TXN-CC-00485",
+    "timestamp": "2024-09-29 13:32:08",
+    "is_fraud": 0,
+    "amount": 333.78,
+    "scores": {
+      "Ensemble": 0.06,
+      "XGBoost": 0.08,
+      "Isolation Forest": 0.05,
+      "Autoencoder": 0.17
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 485,
+    "tx_id": "TXN-CC-00486",
+    "timestamp": "2024-09-29 13:55:03",
+    "is_fraud": 0,
+    "amount": 14.1,
+    "scores": {
+      "Ensemble": 0.12,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.12
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 486,
+    "tx_id": "TXN-CC-00487",
+    "timestamp": "2024-09-29 17:11:30",
+    "is_fraud": 1,
+    "amount": 5529.01,
+    "scores": {
+      "Ensemble": 0.71,
+      "XGBoost": 0.9,
+      "Isolation Forest": 0.49,
+      "Autoencoder": 0.62
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 487,
+    "tx_id": "TXN-CC-00488",
+    "timestamp": "2024-09-29 17:21:13",
+    "is_fraud": 0,
+    "amount": 290.68,
+    "scores": {
+      "Ensemble": 0.23,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.02,
+      "Autoencoder": 0.08
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 488,
+    "tx_id": "TXN-CC-00489",
+    "timestamp": "2024-09-29 17:35:35",
+    "is_fraud": 1,
+    "amount": 8148.73,
+    "scores": {
+      "Ensemble": 0.88,
+      "XGBoost": 0.88,
+      "Isolation Forest": 0.65,
+      "Autoencoder": 0.61
+    },
+    "ensemble_prediction": 1,
+    "risk_level": "high"
+  },
+  {
+    "index": 489,
+    "tx_id": "TXN-CC-00490",
+    "timestamp": "2024-09-29 18:25:54",
+    "is_fraud": 0,
+    "amount": 241.83,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.13,
+      "Isolation Forest": 0.28,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 490,
+    "tx_id": "TXN-CC-00491",
+    "timestamp": "2024-09-29 18:31:01",
+    "is_fraud": 0,
+    "amount": 1678.86,
+    "scores": {
+      "Ensemble": 0.14,
+      "XGBoost": 0.14,
+      "Isolation Forest": 0.26,
+      "Autoencoder": 0.13
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 491,
+    "tx_id": "TXN-CC-00492",
+    "timestamp": "2024-09-29 19:20:35",
+    "is_fraud": 0,
+    "amount": 5025.9,
+    "scores": {
+      "Ensemble": 0.07,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.3,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 492,
+    "tx_id": "TXN-CC-00493",
+    "timestamp": "2024-09-29 19:26:12",
+    "is_fraud": 0,
+    "amount": 377.69,
+    "scores": {
+      "Ensemble": 0.09,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.29,
+      "Autoencoder": 0.18
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 493,
+    "tx_id": "TXN-CC-00494",
+    "timestamp": "2024-09-29 21:32:45",
+    "is_fraud": 0,
+    "amount": 1420.56,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.06,
+      "Isolation Forest": 0.25,
+      "Autoencoder": 0.07
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 494,
+    "tx_id": "TXN-CC-00495",
+    "timestamp": "2024-09-29 21:46:46",
+    "is_fraud": 0,
+    "amount": 290.98,
+    "scores": {
+      "Ensemble": 0.15,
+      "XGBoost": 0.12,
+      "Isolation Forest": 0.27,
+      "Autoencoder": 0.1
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 495,
+    "tx_id": "TXN-CC-00496",
+    "timestamp": "2024-09-29 22:00:05",
+    "is_fraud": 0,
+    "amount": 589.31,
+    "scores": {
+      "Ensemble": 0.17,
+      "XGBoost": 0.11,
+      "Isolation Forest": 0.12,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 496,
+    "tx_id": "TXN-CC-00497",
+    "timestamp": "2024-09-29 22:27:53",
+    "is_fraud": 0,
+    "amount": 189.44,
+    "scores": {
+      "Ensemble": 0.08,
+      "XGBoost": 0.02,
+      "Isolation Forest": 0.03,
+      "Autoencoder": 0.11
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 497,
+    "tx_id": "TXN-CC-00498",
+    "timestamp": "2024-09-30 01:04:08",
+    "is_fraud": 0,
+    "amount": 680.61,
+    "scores": {
+      "Ensemble": 0.16,
+      "XGBoost": 0.03,
+      "Isolation Forest": 0.31,
+      "Autoencoder": 0.04
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 498,
+    "tx_id": "TXN-CC-00499",
+    "timestamp": "2024-09-30 03:41:41",
+    "is_fraud": 0,
+    "amount": 6386.44,
+    "scores": {
+      "Ensemble": 0.11,
+      "XGBoost": 0.07,
+      "Isolation Forest": 0.33,
+      "Autoencoder": 0.15
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  },
+  {
+    "index": 499,
+    "tx_id": "TXN-CC-00500",
+    "timestamp": "2024-09-30 03:59:29",
+    "is_fraud": 0,
+    "amount": 71.31,
+    "scores": {
+      "Ensemble": 0.02,
+      "XGBoost": 0.09,
+      "Isolation Forest": 0.09,
+      "Autoencoder": 0.09
+    },
+    "ensemble_prediction": 0,
+    "risk_level": "low"
+  }
+]

@@ -53,9 +53,10 @@ export async function getHyperparameters(dataset: DatasetKey): Promise<Hyperpara
 }
 
 export async function getSampleTransactions(dataset: DatasetKey) {
-  return fetchJson<{ fraud: Record<string, number>[]; normal: Record<string, number>[] }>(
-    `/data/${dataset}/sample_transactions.json`
-  );
+  return fetchJson<{
+    fraud: { label: string; description: string; features: Record<string, number> }[];
+    normal: { label: string; description: string; features: Record<string, number> }[];
+  }>(`/data/${dataset}/sample_transactions.json`);
 }
 
 export async function getCombinedComparison(): Promise<(ModelResult & { dataset: string })[]> {

@@ -41,16 +41,26 @@ export interface PrCurveData {
 
 export interface Transaction {
   index: number;
+  tx_id: string;
+  timestamp: string;
   is_fraud: number;
   amount: number;
+  risk_level: "high" | "medium" | "low";
   scores: { [model: string]: number };
   ensemble_prediction: number;
+  type?: string;
   step?: number;
   type_code?: number;
   balance_diff_orig?: number;
   balance_diff_dest?: number;
   error_orig?: number;
   error_dest?: number;
+}
+
+export interface SampleTransaction {
+  label: string;
+  description: string;
+  features: Record<string, number>;
 }
 
 export interface DistributionData {

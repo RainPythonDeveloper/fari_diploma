@@ -1,1 +1,142 @@
-{"fraud": [{"step": 1, "oldbalanceOrg": 170136.0, "newbalanceOrig": 0.0, "oldbalanceDest": 0.0, "newbalanceDest": 0.0, "balance_diff_orig": 170136.0, "balance_diff_dest": 0.0, "error_orig": 0.0, "error_dest": -170136.0, "amount_log": 12.04, "type_code": 4}], "normal": [{"step": 1, "oldbalanceOrg": 9839.64, "newbalanceOrig": 6510.95, "oldbalanceDest": 1023252.0, "newbalanceDest": 1026581.0, "balance_diff_orig": 3328.69, "balance_diff_dest": 3329.0, "error_orig": 0.01, "error_dest": 0.31, "amount_log": 8.11, "type_code": 3}]}
+{
+  "fraud": [
+    {
+      "label": "Large fraudulent transfer",
+      "description": "Transfer draining entire account balance",
+      "features": {
+        "step": 15,
+        "oldbalanceOrg": 125000,
+        "newbalanceOrig": 0,
+        "oldbalanceDest": 0,
+        "newbalanceDest": 125000,
+        "balance_diff_orig": 0,
+        "balance_diff_dest": 125000,
+        "error_orig": -125000,
+        "error_dest": 0,
+        "amount_log": 11.74,
+        "type_code": 4
+      }
+    },
+    {
+      "label": "Cash-out fraud",
+      "description": "Suspicious cash withdrawal with balance errors",
+      "features": {
+        "step": 8,
+        "oldbalanceOrg": 85000,
+        "newbalanceOrig": 0,
+        "oldbalanceDest": 15000,
+        "newbalanceDest": 100000,
+        "balance_diff_orig": 0,
+        "balance_diff_dest": 85000,
+        "error_orig": -85000,
+        "error_dest": 0,
+        "amount_log": 11.35,
+        "type_code": 1
+      }
+    },
+    {
+      "label": "Fraudulent transfer chain",
+      "description": "Part of money laundering sequence",
+      "features": {
+        "step": 22,
+        "oldbalanceOrg": 250000,
+        "newbalanceOrig": 0,
+        "oldbalanceDest": 50000,
+        "newbalanceDest": 300000,
+        "balance_diff_orig": 0,
+        "balance_diff_dest": 250000,
+        "error_orig": -250000,
+        "error_dest": 0,
+        "amount_log": 12.43,
+        "type_code": 4
+      }
+    },
+    {
+      "label": "Account compromise",
+      "description": "Large unauthorized cash-out attempt",
+      "features": {
+        "step": 12,
+        "oldbalanceOrg": 65000,
+        "newbalanceOrig": 0,
+        "oldbalanceDest": 0,
+        "newbalanceDest": 65000,
+        "balance_diff_orig": 0,
+        "balance_diff_dest": 65000,
+        "error_orig": -65000,
+        "error_dest": 0,
+        "amount_log": 11.08,
+        "type_code": 1
+      }
+    }
+  ],
+  "normal": [
+    {
+      "label": "Regular payment",
+      "description": "Monthly utility bill payment",
+      "features": {
+        "step": 5,
+        "oldbalanceOrg": 25000,
+        "newbalanceOrig": 24850,
+        "oldbalanceDest": 150000,
+        "newbalanceDest": 150150,
+        "balance_diff_orig": -150,
+        "balance_diff_dest": 150,
+        "error_orig": 0,
+        "error_dest": 0,
+        "amount_log": 5.01,
+        "type_code": 3
+      }
+    },
+    {
+      "label": "Salary deposit",
+      "description": "Monthly salary cash-in",
+      "features": {
+        "step": 10,
+        "oldbalanceOrg": 500000,
+        "newbalanceOrig": 497500,
+        "oldbalanceDest": 5000,
+        "newbalanceDest": 7500,
+        "balance_diff_orig": -2500,
+        "balance_diff_dest": 2500,
+        "error_orig": 0,
+        "error_dest": 0,
+        "amount_log": 7.82,
+        "type_code": 0
+      }
+    },
+    {
+      "label": "Legitimate transfer",
+      "description": "Transfer to family member",
+      "features": {
+        "step": 18,
+        "oldbalanceOrg": 45000,
+        "newbalanceOrig": 42000,
+        "oldbalanceDest": 12000,
+        "newbalanceDest": 15000,
+        "balance_diff_orig": -3000,
+        "balance_diff_dest": 3000,
+        "error_orig": 0,
+        "error_dest": 0,
+        "amount_log": 8.01,
+        "type_code": 4
+      }
+    },
+    {
+      "label": "Debit card purchase",
+      "description": "Point of sale debit transaction",
+      "features": {
+        "step": 7,
+        "oldbalanceOrg": 18000,
+        "newbalanceOrig": 17450,
+        "oldbalanceDest": 75000,
+        "newbalanceDest": 75550,
+        "balance_diff_orig": -550,
+        "balance_diff_dest": 550,
+        "error_orig": 0,
+        "error_dest": 0,
+        "amount_log": 6.31,
+        "type_code": 2
+      }
+    }
+  ]
+}
