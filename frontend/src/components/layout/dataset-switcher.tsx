@@ -1,4 +1,3 @@
-"use client";
 
 import { useDataset } from "@/hooks/use-dataset";
 import { DATASET_LABELS } from "@/lib/constants";

@@ -1,4 +1,3 @@
-"use client";
 
 import { useState, useEffect } from "react";
 import { useDataset } from "@/hooks/use-dataset";

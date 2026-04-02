@@ -1,4 +1,3 @@
-"use client";
 
 import { useEffect, useState } from "react";
 import { Activity, AlertTriangle, Percent, Trophy } from "lucide-react";

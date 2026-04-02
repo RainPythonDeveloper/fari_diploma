@@ -1,4 +1,3 @@
-"use client";
 
 import { createContext, useContext, useState, type ReactNode } from "react";
 import type { DatasetKey } from "@/lib/types";

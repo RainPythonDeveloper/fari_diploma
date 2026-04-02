@@ -1,6 +1,4 @@
-"use client";
-
-import { usePathname } from "next/navigation";
+import { useLocation } from "react-router-dom";
 import { MobileSidebar } from "./sidebar";
 
 const PAGE_TITLES: Record<string, string> = {
@@ -12,7 +10,7 @@ const PAGE_TITLES: Record<string, string> = {
 };
 
 export function Header() {
-  const pathname = usePathname();
+  const { pathname } = useLocation();
   const title = PAGE_TITLES[pathname] || "Dashboard";
 
   return (
