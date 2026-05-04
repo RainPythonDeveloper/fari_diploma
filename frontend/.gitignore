@@ -24,3 +24,7 @@ dist/
 
 # TypeScript
 *.tsbuildinfo
+
+# Claude
+.claude/
+CLAUDE.md
