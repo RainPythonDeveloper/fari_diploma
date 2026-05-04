@@ -142,6 +142,28 @@ def generate_dataset_data(df_raw, X, y, dataset_tag, dataset_name):
     xgb_preds = (xgb_probs >= 0.5).astype(int)
     models_data["XGBoost"] = {"preds": xgb_preds, "scores": xgb_probs}
 
+    # Global SHAP feature importance for XGBoost
+    _shap_data = []
+    try:
+        import shap as _shap_lib
+        _explainer = _shap_lib.TreeExplainer(xgb_model)
+        _shap_n = min(200, len(X_test_scaled))
+        _shap_idx = np.random.choice(len(X_test_scaled), size=_shap_n, replace=False)
+        _shap_vals = _explainer.shap_values(X_test_scaled[_shap_idx])
+        _shap_mean_abs = np.mean(np.abs(_shap_vals), axis=0)
+        _shap_mean = np.mean(_shap_vals, axis=0)
+        _feat_names_shap = list(scaler.feature_names_in_)
+        _shap_data = sorted([
+            {
+                "name": _feat_names_shap[i],
+                "mean_abs_shap": round(float(_shap_mean_abs[i]), 4),
+                "mean_shap": round(float(_shap_mean[i]), 4),
+            }
+            for i in range(len(_feat_names_shap))
+        ], key=lambda x: -x["mean_abs_shap"])
+    except ImportError:
+        print("  shap not installed — skipping global SHAP. Run: pip install shap")
+
     # Isolation Forest
     iforest = joblib.load(os.path.join(MODELS_DIR, f"iforest_{dataset_tag}.pkl"))
     if_raw = iforest.predict(X_test_scaled)
@@ -239,25 +261,29 @@ def generate_dataset_data(df_raw, X, y, dataset_tag, dataset_name):
     # --- roc_curves.json ---
     roc_data = {}
     for model_name, mdata in models_data.items():
-        fpr, tpr, _ = roc_curve(y_test, mdata["scores"])
+        fpr, tpr, thresh_roc = roc_curve(y_test, mdata["scores"])
         # Downsample to ~200 points for JSON size
         step = max(1, len(fpr) // 200)
         roc_data[model_name] = {
             "fpr": [round(float(v), 4) for v in fpr[::step]],
             "tpr": [round(float(v), 4) for v in tpr[::step]],
             "auc": round(float(roc_auc_score(y_test, mdata["scores"])), 4),
+            "thresholds": [round(float(v), 4) for v in thresh_roc[::step]],
         }
     save_json(roc_data, folder, "roc_curves.json")
 
     # --- pr_curves.json ---
     pr_data = {}
     for model_name, mdata in models_data.items():
-        prec, rec, _ = precision_recall_curve(y_test, mdata["scores"])
-        step = max(1, len(prec) // 200)
+        prec, rec, thresh_pr = precision_recall_curve(y_test, mdata["scores"])
+        # prec/rec have one extra element vs thresholds; align them
+        prec_a, rec_a = prec[:-1], rec[:-1]
+        step = max(1, len(prec_a) // 200)
         pr_data[model_name] = {
-            "precision": [round(float(v), 4) for v in prec[::step]],
-            "recall": [round(float(v), 4) for v in rec[::step]],
+            "precision": [round(float(v), 4) for v in prec_a[::step]],
+            "recall": [round(float(v), 4) for v in rec_a[::step]],
             "ap": round(float(average_precision_score(y_test, mdata["scores"])), 4),
+            "thresholds": [round(float(v), 4) for v in thresh_pr[::step]],
         }
     save_json(pr_data, folder, "pr_curves.json")
 
@@ -301,12 +327,12 @@ def generate_dataset_data(df_raw, X, y, dataset_tag, dataset_name):
 
         save_json({
             "amount": {
-                "normal": np.histogram(normal_amounts, bins=50),
-                "fraud": np.histogram(fraud_amounts, bins=50),
+                "normal": _hist_to_json(normal_amounts, 50),
+                "fraud": _hist_to_json(fraud_amounts, 50),
             },
             "time": {
-                "normal": np.histogram(normal_times, bins=48),
-                "fraud": np.histogram(fraud_times, bins=48),
+                "normal": _hist_to_json(normal_times, 48),
+                "fraud": _hist_to_json(fraud_times, 48),
             }
         }, folder, "distributions.json")
     else:
@@ -352,6 +378,36 @@ def generate_dataset_data(df_raw, X, y, dataset_tag, dataset_name):
     for _, row in normal_examples.iterrows():
         samples["normal"].append({col: round(float(row[col]), 6) for col in X_test_reset.columns})
     save_json(samples, folder, "sample_transactions.json")
+
+    # --- shap_values.json ---
+    if _shap_data:
+        save_json(_shap_data, folder, "shap_values.json")
+
+    # --- feature_analysis.json (Cohen's d per feature) ---
+    feat_cols = list(X.columns)
+    X_arr = X.values
+    fraud_mask = (y == 1).values
+    normal_mask = (y == 0).values
+    feat_analysis = []
+    for _i, _fname in enumerate(feat_cols):
+        _fv = X_arr[fraud_mask, _i]
+        _nv = X_arr[normal_mask, _i]
+        _fm, _nm = float(np.mean(_fv)), float(np.mean(_nv))
+        _fs, _ns = float(np.std(_fv)), float(np.std(_nv))
+        _nf, _nn = len(_fv), len(_nv)
+        _pooled = np.sqrt(((_nf - 1) * _fs**2 + (_nn - 1) * _ns**2) / (_nf + _nn - 2))
+        _d = (_fm - _nm) / (_pooled + 1e-10)
+        feat_analysis.append({
+            "name": _fname,
+            "cohen_d": round(float(_d), 4),
+            "abs_cohen_d": round(float(abs(_d)), 4),
+            "fraud_mean": round(_fm, 4),
+            "normal_mean": round(_nm, 4),
+            "fraud_std": round(_fs, 4),
+            "normal_std": round(_ns, 4),
+        })
+    feat_analysis.sort(key=lambda x: -x["abs_cohen_d"])
+    save_json(feat_analysis, folder, "feature_analysis.json")
 
     return model_results
 

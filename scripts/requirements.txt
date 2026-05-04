@@ -6,3 +6,4 @@ tensorflow
 tf2onnx
 onnxruntime
 joblib
+shap

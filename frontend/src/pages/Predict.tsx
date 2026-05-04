@@ -5,7 +5,7 @@ import { getSampleTransactions } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MODEL_COLORS, DATASET_LABELS } from "@/lib/constants";
 import { Zap, AlertTriangle, CheckCircle, Loader2, ChevronDown, ChevronUp, Info } from "lucide-react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from "recharts";
 
 interface PredictResult {
   fraud: boolean;
@@ -13,6 +13,7 @@ interface PredictResult {
   scores: Record<string, number>;
   threshold: number;
   latency_ms: number;
+  shap_values?: Record<string, number>;
 }
 
 interface Sample {
@@ -300,6 +301,42 @@ export default function PredictPage() {
                   </ResponsiveContainer>
                 </CardContent>
               </Card>
+
+              {/* SHAP Feature Contributions */}
+              {result.shap_values && (() => {
+                const entries = Object.entries(result.shap_values!)
+                  .sort((a, b) => Math.abs(b[1] as number) - Math.abs(a[1] as number))
+                  .slice(0, 10);
+                const maxAbs = Math.max(...entries.map(([, v]) => Math.abs(v as number)), 0.01);
+                return (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-sm font-medium">Feature Contributions (XGBoost SHAP)</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-xs text-muted-foreground mb-3">
+                        Red bars push toward fraud, green bars toward normal. Longer = stronger influence on this prediction.
+                      </p>
+                      <ResponsiveContainer width="100%" height={260}>
+                        <BarChart data={entries.map(([name, value]) => ({ name, value }))} layout="vertical" margin={{ left: 90, right: 20 }}>
+                          <XAxis type="number" domain={[-maxAbs - 0.02, maxAbs + 0.02]} tick={{ fill: "#a1a1aa", fontSize: 10 }} tickFormatter={(v: number) => v.toFixed(2)} />
+                          <YAxis type="category" dataKey="name" tick={{ fill: "#a1a1aa", fontSize: 10 }} width={90} />
+                          <Tooltip
+                            contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+                            formatter={(v) => [typeof v === "number" ? v.toFixed(4) : "", "SHAP value"]}
+                          />
+                          <ReferenceLine x={0} stroke="#52525b" strokeWidth={1} />
+                          <Bar dataKey="value" radius={[0, 4, 4, 0]}>
+                            {entries.map(([, value], i) => (
+                              <Cell key={i} fill={(value as number) > 0 ? "#ef4444" : "#10b981"} />
+                            ))}
+                          </Bar>
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </CardContent>
+                  </Card>
+                );
+              })()}
             </>
           ) : (
             <Card className="border-dashed">

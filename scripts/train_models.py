@@ -277,7 +277,7 @@ def train_all_models(X, y, dataset_tag):
         import tf2onnx
         import tensorflow as tf
         onnx_path = os.path.join(MODELS_DIR, f"autoencoder_{dataset_tag}.onnx")
-        spec = (tf.TensorSpec(ae_model.input_shape[1:], tf.float32, name="input"),)
+        spec = (tf.TensorSpec((None,) + ae_model.input_shape[1:], tf.float32, name="input"),)
         tf2onnx.convert.from_keras(ae_model, input_signature=spec, output_path=onnx_path)
         print(f"    Saved ONNX to {onnx_path}")
     except Exception as e:

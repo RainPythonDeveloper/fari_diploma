@@ -98,6 +98,15 @@ def predict(dataset_tag, features_dict):
     # XGBoost score
     xgb_prob = float(m["xgboost"].predict_proba(scaled)[0, 1])
 
+    # Per-transaction SHAP via XGBoost built-in (no extra packages)
+    import xgboost as xgb
+    dmatrix = xgb.DMatrix(scaled, feature_names=list(feature_names))
+    contribs = m["xgboost"].get_booster().predict(dmatrix, pred_contribs=True)
+    shap_dict = {
+        str(feature_names[i]): round(float(contribs[0][i]), 4)
+        for i in range(len(feature_names))
+    }
+
     # Isolation Forest score
     if_score = float(-m["iforest"].decision_function(scaled)[0])
     if_range = ensemble_config["iforest_score_range"]
@@ -136,6 +145,7 @@ def predict(dataset_tag, features_dict):
         },
         "threshold": round(float(threshold), 4),
         "latency_ms": latency_ms,
+        "shap_values": shap_dict,
     }
 
 

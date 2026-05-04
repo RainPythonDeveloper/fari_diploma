@@ -1,23 +1,39 @@
 
 import { useEffect, useState } from "react";
 import { useDataset } from "@/hooks/use-dataset";
-import { getModelResults, getConfusionMatrices, getHyperparameters } from "@/lib/data";
-import type { ModelResult, ConfusionMatrixData, Hyperparameter } from "@/lib/types";
+import { getModelResults, getConfusionMatrices, getHyperparameters, getShapValues } from "@/lib/data";
+import type { ModelResult, ConfusionMatrixData, Hyperparameter, ShapFeature } from "@/lib/types";
 import { MODEL_COLORS } from "@/lib/constants";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ConfusionMatrix } from "@/components/models/confusion-matrix";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 export default function ModelsPage() {
   const { dataset } = useDataset();
   const [results, setResults] = useState<ModelResult[]>([]);
   const [cm, setCm] = useState<ConfusionMatrixData | null>(null);
   const [params, setParams] = useState<Hyperparameter[]>([]);
+  const [shapData, setShapData] = useState<ShapFeature[]>([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    getModelResults(dataset).then(setResults);
-    getConfusionMatrices(dataset).then(setCm);
-    getHyperparameters(dataset).then(setParams);
+    setError("");
+    setResults([]);
+    setCm(null);
+    setShapData([]);
+    getModelResults(dataset).then(setResults).catch(() => setError("Failed to load model data"));
+    getConfusionMatrices(dataset).then(setCm).catch(() => {});
+    getHyperparameters(dataset).then(setParams).catch(() => {});
+    getShapValues(dataset).then(setShapData).catch(() => {});
   }, [dataset]);
+
+  if (error) return <p className="text-sm text-red-500 bg-red-500/10 rounded-md px-3 py-2">{error}</p>;
+  if (!results.length && !cm) return (
+    <div className="space-y-6">
+      <div className="h-64 bg-card rounded-lg animate-pulse" />
+      <div className="h-80 bg-card rounded-lg animate-pulse" />
+    </div>
+  );
 
   return (
     <div className="space-y-6">
@@ -107,6 +123,31 @@ export default function ModelsPage() {
                 ))}
               </tbody>
             </table>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Global SHAP Feature Importance */}
+      {shapData.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-sm font-medium">XGBoost Feature Importance (SHAP)</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-xs text-muted-foreground mb-3">
+              Mean absolute SHAP value across test samples — measures each feature's average contribution to the XGBoost model's fraud predictions.
+            </p>
+            <ResponsiveContainer width="100%" height={380}>
+              <BarChart data={shapData.slice(0, 15)} layout="vertical" margin={{ left: 90, right: 20 }}>
+                <XAxis type="number" tick={{ fill: "#a1a1aa", fontSize: 10 }} tickFormatter={(v: number) => v.toFixed(3)} />
+                <YAxis type="category" dataKey="name" tick={{ fill: "#a1a1aa", fontSize: 10 }} width={90} />
+                <Tooltip
+                  contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+                  formatter={(v) => [typeof v === "number" ? v.toFixed(4) : "", "mean |SHAP|"]}
+                />
+                <Bar dataKey="mean_abs_shap" fill={MODEL_COLORS["XGBoost"] || "#3b82f6"} radius={[0, 4, 4, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
           </CardContent>
         </Card>
       )}

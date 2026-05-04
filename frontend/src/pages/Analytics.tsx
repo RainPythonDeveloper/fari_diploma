@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useDataset } from "@/hooks/use-dataset";
 import { getRocCurves, getPrCurves, getModelResults, getCombinedComparison } from "@/lib/data";
 import type { RocCurveData, PrCurveData, ModelResult } from "@/lib/types";
@@ -19,13 +19,42 @@ export default function AnalyticsPage() {
   const [pr, setPr] = useState<PrCurveData | null>(null);
   const [results, setResults] = useState<ModelResult[]>([]);
   const [combined, setCombined] = useState<(ModelResult & { dataset: string })[]>([]);
+  const [error, setError] = useState("");
+  const [threshold, setThreshold] = useState(0.5);
+  const [threshModel, setThreshModel] = useState("");
 
   useEffect(() => {
-    getRocCurves(dataset).then(setRoc);
-    getPrCurves(dataset).then(setPr);
-    getModelResults(dataset).then(setResults);
-    getCombinedComparison().then(setCombined);
-  }, [dataset]);
+    setError("");
+    setRoc(null);
+    setPr(null);
+    getRocCurves(dataset).then(setRoc).catch(() => setError("Failed to load analytics data"));
+    getPrCurves(dataset).then(setPr).catch(() => {});
+    getModelResults(dataset).then((r) => { setResults(r); if (!threshModel && r.length) setThreshModel(r[0].model); }).catch(() => {});
+    getCombinedComparison().then(setCombined).catch(() => {});
+  }, [dataset]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const threshMetrics = useMemo(() => {
+    if (!roc || !pr || !threshModel) return null;
+    const rocModel = roc[threshModel];
+    const prModel = pr[threshModel];
+    if (!rocModel?.thresholds?.length || !prModel?.thresholds?.length) return null;
+    const maxIdx = rocModel.thresholds.length - 1;
+    const rocIdx = Math.round((1 - threshold) * maxIdx);
+    const prIdx = Math.round((1 - threshold) * (prModel.thresholds.length - 1));
+    const tpr = rocModel.tpr[rocIdx] ?? 0;
+    const fpr = rocModel.fpr[rocIdx] ?? 0;
+    const precision = prModel.precision[prIdx] ?? 0;
+    const recall = prModel.recall[prIdx] ?? 0;
+    const f1 = precision + recall > 0 ? (2 * precision * recall) / (precision + recall) : 0;
+    return { tpr, fpr, precision, recall, f1 };
+  }, [roc, pr, threshModel, threshold]);
+
+  if (error) return <p className="text-sm text-red-500 bg-red-500/10 rounded-md px-3 py-2">{error}</p>;
+  if (!roc && !pr && !results.length) return (
+    <div className="space-y-6">
+      {[1, 2, 3].map((i) => <div key={i} className="h-80 bg-card rounded-lg animate-pulse" />)}
+    </div>
+  );
 
   return (
     <div className="space-y-6">
@@ -155,6 +184,57 @@ export default function AnalyticsPage() {
           </CardContent>
         </Card>
       )}
+
+      {/* Threshold Sensitivity Analysis */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-sm font-medium">Threshold Sensitivity Analysis</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="text-xs text-muted-foreground">
+            Adjust the decision threshold to explore the Precision / Recall / F1 trade-off. Higher threshold = fewer fraud alerts but more missed frauds.
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <label className="text-xs text-muted-foreground">Model:</label>
+            <select
+              value={threshModel}
+              onChange={(e) => setThreshModel(e.target.value)}
+              className="text-xs bg-muted border border-border rounded-md px-2 py-1 outline-none"
+            >
+              {results.map((r) => <option key={r.model} value={r.model}>{r.model}</option>)}
+            </select>
+          </div>
+          <div className="flex items-center gap-3">
+            <label className="text-xs text-muted-foreground w-20 shrink-0">Threshold:</label>
+            <input
+              type="range" min={0} max={1} step={0.01}
+              value={threshold}
+              onChange={(e) => setThreshold(parseFloat(e.target.value))}
+              className="flex-1 accent-primary"
+            />
+            <span className="text-xs font-mono w-10 text-right">{threshold.toFixed(2)}</span>
+          </div>
+          {threshMetrics ? (
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+              {([
+                ["Precision", threshMetrics.precision, "text-blue-400"],
+                ["Recall (TPR)", threshMetrics.tpr, "text-emerald-400"],
+                ["F1 Score", threshMetrics.f1, "text-amber-400"],
+                ["FPR", threshMetrics.fpr, "text-red-400"],
+              ] as [string, number, string][]).map(([label, value, color]) => (
+                <div key={label} className="bg-muted rounded-lg p-3 text-center">
+                  <p className="text-xs text-muted-foreground mb-1">{label}</p>
+                  <p className={`text-xl font-bold font-mono ${color}`}>{(value * 100).toFixed(1)}%</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-xs text-muted-foreground italic">
+              Re-run <code className="font-mono">generate_dashboard_data.py</code> to enable live threshold analysis.
+            </p>
+          )}
+        </CardContent>
+      </Card>
     </div>
   );
 }

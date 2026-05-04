@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { LayoutDashboard, Brain, Table, BarChart3, Zap, Shield, Menu } from "lucide-react";
+import { LayoutDashboard, Brain, Table, BarChart3, Zap, Shield, Menu, Layers } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { DatasetSwitcher } from "./dataset-switcher";
 import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "@/components/ui/sheet";
@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { path: "/transactions", label: "Transactions", icon: Table },
   { path: "/analytics", label: "Analytics", icon: BarChart3 },
   { path: "/predict", label: "Real-time Predict", icon: Zap },
+  { path: "/drift", label: "Feature Analysis", icon: Layers },
 ];
 
 function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {

@@ -8,6 +8,8 @@ import type {
   Transaction,
   DistributionData,
   Hyperparameter,
+  ShapFeature,
+  FeatureAnalysis,
 } from "./types";
 
 const cache = new Map<string, unknown>();
@@ -40,8 +42,28 @@ export async function getPrCurves(dataset: DatasetKey): Promise<PrCurveData> {
   return fetchJson(`/data/${dataset}/pr_curves.json`);
 }
 
+const PS_TYPE_MAP: Record<number, string> = {
+  0: "CASH_IN", 1: "CASH_OUT", 2: "DEBIT", 3: "PAYMENT", 4: "TRANSFER",
+};
+
 export async function getTransactions(dataset: DatasetKey): Promise<Transaction[]> {
-  return fetchJson(`/data/${dataset}/transactions.json`);
+  const raw = await fetchJson<(Omit<Transaction, "tx_id" | "timestamp" | "risk_level" | "type"> & { type_code?: number })[]>(
+    `/data/${dataset}/transactions.json`
+  );
+  const prefix = dataset === "creditcard" ? "CC" : "PS";
+  return raw.map((t) => {
+    const ensemble = t.scores["Ensemble"] ?? 0;
+    const risk_level: Transaction["risk_level"] = ensemble > 0.7 ? "high" : ensemble > 0.3 ? "medium" : "low";
+    const tx_id = `${prefix}-${String(t.index).padStart(6, "0")}`;
+    let timestamp = "";
+    if (t.step !== undefined) {
+      const day = Math.floor(t.step / 24) + 1;
+      const hour = String(Math.floor(t.step % 24)).padStart(2, "0");
+      timestamp = `Day ${day}, ${hour}:00`;
+    }
+    const type = t.type_code !== undefined ? PS_TYPE_MAP[Math.round(t.type_code)] : undefined;
+    return { ...t, tx_id, timestamp, risk_level, type };
+  });
 }
 
 export async function getDistributions(dataset: DatasetKey): Promise<DistributionData> {
@@ -69,4 +91,12 @@ export async function getCombinedRanking() {
 
 export async function getBestModels() {
   return fetchJson<(ModelResult & { dataset: string })[]>(`/data/combined/best_models.json`);
+}
+
+export async function getShapValues(dataset: DatasetKey): Promise<ShapFeature[]> {
+  return fetchJson(`/data/${dataset}/shap_values.json`);
+}
+
+export async function getFeatureAnalysis(dataset: DatasetKey): Promise<FeatureAnalysis[]> {
+  return fetchJson(`/data/${dataset}/feature_analysis.json`);
 }

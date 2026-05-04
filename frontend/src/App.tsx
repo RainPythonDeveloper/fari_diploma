@@ -6,6 +6,7 @@ import ModelsPage from "@/pages/Models";
 import TransactionsPage from "@/pages/Transactions";
 import AnalyticsPage from "@/pages/Analytics";
 import PredictPage from "@/pages/Predict";
+import DriftPage from "@/pages/Drift";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/transactions" element={<TransactionsPage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/predict" element={<PredictPage />} />
+            <Route path="/drift" element={<DriftPage />} />
           </Routes>
         </main>
       </div>

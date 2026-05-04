@@ -16,12 +16,15 @@ export default function TransactionsPage() {
   const [filter, setFilter] = useState<Filter>("all");
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    getTransactions(dataset).then(setTransactions);
-    getSummary(dataset).then(setSummary);
+    setError("");
+    getTransactions(dataset).then(setTransactions).catch(() => setError("Failed to load transactions"));
+    getSummary(dataset).then(setSummary).catch(() => {});
     setPage(0);
     setSearch("");
+    setFilter("all");
   }, [dataset]);
 
   const filtered = useMemo(() => {
@@ -48,6 +51,16 @@ export default function TransactionsPage() {
   const detectionRate = fraudCount > 0
     ? ((transactions.filter((t) => t.is_fraud === 1 && t.ensemble_prediction === 1).length / fraudCount) * 100).toFixed(1)
     : "0";
+
+  if (error) return <p className="text-sm text-red-500 bg-red-500/10 rounded-md px-3 py-2">{error}</p>;
+  if (!transactions.length && !summary) return (
+    <div className="space-y-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        {[1, 2, 3, 4].map((i) => <div key={i} className="h-20 bg-card rounded-lg animate-pulse" />)}
+      </div>
+      <div className="h-96 bg-card rounded-lg animate-pulse" />
+    </div>
+  );
 
   return (
     <div className="space-y-4">

@@ -17,9 +17,10 @@ export default function DashboardPage() {
   const [roc, setRoc] = useState<RocCurveData | null>(null);
 
   useEffect(() => {
-    getSummary(dataset).then(setSummary);
-    getModelResults(dataset).then(setResults);
-    getRocCurves(dataset).then(setRoc);
+    setSummary(null);
+    getSummary(dataset).then(setSummary).catch(() => setSummary(null));
+    getModelResults(dataset).then(setResults).catch(() => {});
+    getRocCurves(dataset).then(setRoc).catch(() => {});
   }, [dataset]);
 
   if (!summary) return <LoadingSkeleton />;

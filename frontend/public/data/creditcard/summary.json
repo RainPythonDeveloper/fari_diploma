@@ -1,1 +1,1 @@
-{"name": "Credit Card", "total_samples": 283726, "normal": 283253, "fraud": 473, "fraud_rate": 0.1667, "features_count": 31, "test_samples": 57124, "test_fraud": 473, "contamination": 0.0017}
+{"name": "Credit Card", "total_samples": 283726, "normal": 283253, "fraud": 473, "fraud_rate": 0.1667, "features_count": 31, "test_samples": 57124, "test_fraud": 473, "contamination": 0.001667101358352777}

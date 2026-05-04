@@ -32,11 +32,11 @@ export interface ConfusionMatrixData {
 }
 
 export interface RocCurveData {
-  [model: string]: { fpr: number[]; tpr: number[]; auc: number };
+  [model: string]: { fpr: number[]; tpr: number[]; auc: number; thresholds?: number[] };
 }
 
 export interface PrCurveData {
-  [model: string]: { precision: number[]; recall: number[]; ap: number };
+  [model: string]: { precision: number[]; recall: number[]; ap: number; thresholds?: number[] };
 }
 
 export interface Transaction {
@@ -86,4 +86,21 @@ export interface PredictResponse {
   scores: { [model: string]: number };
   threshold: number;
   latency_ms: number;
+  shap_values?: Record<string, number>;
+}
+
+export interface ShapFeature {
+  name: string;
+  mean_abs_shap: number;
+  mean_shap: number;
+}
+
+export interface FeatureAnalysis {
+  name: string;
+  cohen_d: number;
+  abs_cohen_d: number;
+  fraud_mean: number;
+  normal_mean: number;
+  fraud_std: number;
+  normal_std: number;
 }

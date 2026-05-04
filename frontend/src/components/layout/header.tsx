@@ -7,6 +7,7 @@ const PAGE_TITLES: Record<string, string> = {
   "/transactions": "Transaction Explorer",
   "/analytics": "Analytics",
   "/predict": "Real-time Prediction",
+  "/drift": "Feature Analysis",
 };
 
 export function Header() {
