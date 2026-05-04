@@ -11,6 +11,14 @@ models/*.keras
 # Node
 frontend/node_modules/
 frontend/.next/
+frontend/dist/
+
+# Claude Code internal
+.claude/
+CLAUDE.md
+
+# Jupyter
+.ipynb_checkpoints/
 
 # Environment
 .env*.local
