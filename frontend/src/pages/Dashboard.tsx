@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Activity, AlertTriangle, Percent, Trophy } from "lucide-react";
+import { Activity, AlertTriangle, Percent, Trophy, Shield } from "lucide-react";
 import { useDataset } from "@/hooks/use-dataset";
 import { getSummary, getModelResults, getRocCurves } from "@/lib/data";
 import type { DatasetSummary, ModelResult, RocCurveData } from "@/lib/types";
@@ -8,7 +8,7 @@ import { StatCard } from "@/components/dashboard/stat-card";
 import { F1BarChart } from "@/components/charts/f1-bar-chart";
 import { RocChart } from "@/components/charts/roc-chart";
 import { ClassBalanceChart } from "@/components/charts/class-balance-chart";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 export default function DashboardPage() {
   const { dataset } = useDataset();
@@ -29,6 +29,30 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-6">
+      {/* Project overview */}
+      <Card className="border-emerald-500/20 bg-emerald-500/5">
+        <CardContent className="pt-5 pb-4">
+          <div className="flex gap-3">
+            <Shield className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+            <div className="space-y-1.5">
+              <p className="text-sm font-semibold text-foreground">Automated Fraud Detection using Machine Learning — Diploma Project</p>
+              <p className="text-xs text-muted-foreground">
+                The system detects fraudulent financial transactions by combining three complementary ML models into a weighted ensemble:
+                {" "}<span className="text-foreground font-medium">XGBoost</span> (supervised gradient boosting — learns explicit fraud patterns from labeled training data),
+                {" "}<span className="text-foreground font-medium">Isolation Forest</span> (unsupervised anomaly detection — isolates rare transactions that deviate from the norm), and
+                {" "}<span className="text-foreground font-medium">Autoencoder</span> (deep neural network — flags transactions with high reconstruction error, i.e. unusual feature combinations).
+                Each model produces a fraud score from 0–1; the ensemble combines them with optimised weights for the final verdict.
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Two real-world datasets are supported — switch via the sidebar:
+                {" "}<span className="text-foreground font-medium">Credit Card</span> (284 k European bank transactions, features PCA-anonymised for privacy) and
+                {" "}<span className="text-foreground font-medium">PaySim</span> (synthetic mobile-money transfers modelled on M-Pesa behaviour).
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           title="Total Transactions"

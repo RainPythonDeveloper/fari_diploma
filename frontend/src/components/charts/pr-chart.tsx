@@ -1,7 +1,7 @@
 "use client";
 
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from "recharts";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { MODEL_COLORS } from "@/lib/constants";
 import type { PrCurveData } from "@/lib/types";
 
@@ -12,6 +12,10 @@ export function PrChart({ data }: { data: PrCurveData }) {
     <Card>
       <CardHeader>
         <CardTitle className="text-sm font-medium">Precision-Recall Curves</CardTitle>
+        <CardDescription className="text-xs">
+          More informative than ROC for heavily imbalanced datasets (few frauds among many normal transactions).
+          AP (Average Precision) summarises the area under the curve — higher means fewer missed frauds and fewer false alarms across all thresholds.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={350}>

@@ -1,7 +1,7 @@
 "use client";
 
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import type { DatasetSummary } from "@/lib/types";
 
 export function ClassBalanceChart({ summary }: { summary: DatasetSummary }) {
@@ -14,6 +14,10 @@ export function ClassBalanceChart({ summary }: { summary: DatasetSummary }) {
     <Card>
       <CardHeader>
         <CardTitle className="text-sm font-medium">Class Balance</CardTitle>
+        <CardDescription className="text-xs">
+          Fraud transactions are a tiny minority — this extreme imbalance is the core challenge.
+          Models must learn to detect rare fraud without flooding normal transactions with false alarms.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={200}>
@@ -33,6 +37,7 @@ export function ClassBalanceChart({ summary }: { summary: DatasetSummary }) {
             </Pie>
             <Tooltip
               contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+              labelStyle={{ color: "#fafafa" }}
               formatter={(value) => [typeof value === "number" ? value.toLocaleString() : value, ""]}
             />
             <Legend wrapperStyle={{ fontSize: 12 }} />

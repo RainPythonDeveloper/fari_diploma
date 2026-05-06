@@ -1,7 +1,7 @@
 "use client";
 
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from "recharts";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { MODEL_COLORS } from "@/lib/constants";
 import type { RocCurveData } from "@/lib/types";
 
@@ -23,7 +23,11 @@ export function RocChart({ data }: { data: RocCurveData }) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-sm font-medium">ROC Curves</CardTitle>
+        <CardTitle className="text-sm font-medium">ROC Curves — Receiver Operating Characteristic</CardTitle>
+        <CardDescription className="text-xs">
+          Each curve plots True Positive Rate (fraud caught) vs. False Positive Rate (normal flagged as fraud) across all decision thresholds.
+          AUC closer to 1.0 = better discrimination. The dashed diagonal line represents a random classifier (AUC = 0.5).
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={350}>

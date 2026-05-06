@@ -1,7 +1,7 @@
 "use client";
 
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { MODEL_COLORS } from "@/lib/constants";
 import type { ModelResult } from "@/lib/types";
 
@@ -16,6 +16,10 @@ export function F1BarChart({ results }: { results: ModelResult[] }) {
     <Card>
       <CardHeader>
         <CardTitle className="text-sm font-medium">F1-Score by Model</CardTitle>
+        <CardDescription className="text-xs">
+          F1-Score is the harmonic mean of Precision and Recall — it penalises both false alarms and missed frauds equally.
+          A score of 1.0 means perfect detection; 0.0 means complete failure. Higher bars indicate better models.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>

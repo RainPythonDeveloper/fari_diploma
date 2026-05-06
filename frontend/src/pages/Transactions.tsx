@@ -4,7 +4,7 @@ import { useDataset } from "@/hooks/use-dataset";
 import { getTransactions, getSummary } from "@/lib/data";
 import type { Transaction, DatasetSummary } from "@/lib/types";
 import { Card, CardContent } from "@/components/ui/card";
-import { Activity, AlertTriangle, ShieldCheck, Search, TrendingUp } from "lucide-react";
+import { Activity, AlertTriangle, ShieldCheck, Search, TrendingUp, Info } from "lucide-react";
 
 type Filter = "all" | "fraud" | "normal";
 const PAGE_SIZE = 50;
@@ -64,6 +64,29 @@ export default function TransactionsPage() {
 
   return (
     <div className="space-y-4">
+      {/* Intro */}
+      <Card className="border-blue-500/20 bg-blue-500/5">
+        <CardContent className="pt-4 pb-4">
+          <div className="flex gap-3">
+            <Info className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+            <div className="text-xs text-muted-foreground space-y-1">
+              <p className="text-sm font-medium text-foreground">Transaction-Level Fraud Scoring</p>
+              <p>
+                This table shows a representative sample of transactions from the selected dataset, each scored by all three models (XGBoost, Isolation Forest, Autoencoder) and the final ensemble.
+                The ensemble score is a weighted combination — transactions above the trained threshold are flagged as <span className="text-red-400 font-medium">FRAUD</span>.
+              </p>
+              <p>
+                <span className="text-foreground font-medium">Ensemble</span> = weighted average of all model scores.
+                {" "}<span className="text-foreground font-medium">XGBoost</span> = supervised score (pattern match to training fraud cases).
+                {" "}<span className="text-foreground font-medium">IF</span> = Isolation Forest anomaly score (statistical outlier strength).
+                {" "}<span className="text-foreground font-medium">AE</span> = Autoencoder reconstruction error (how unusual the feature combination is).
+                Risk level is derived from the ensemble score: High &gt; 0.7, Medium 0.3–0.7, Low &lt; 0.3.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Summary Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <MiniStat

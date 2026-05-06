@@ -5,7 +5,7 @@ import { getRocCurves, getPrCurves, getModelResults, getCombinedComparison } fro
 import type { RocCurveData, PrCurveData, ModelResult } from "@/lib/types";
 import { RocChart } from "@/components/charts/roc-chart";
 import { PrChart } from "@/components/charts/pr-chart";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { MODEL_COLORS } from "@/lib/constants";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell,
@@ -66,7 +66,11 @@ export default function AnalyticsPage() {
       {/* Precision vs Recall scatter */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-sm font-medium">Precision vs Recall</CardTitle>
+          <CardTitle className="text-sm font-medium">Precision vs Recall — Operating Point Comparison</CardTitle>
+          <CardDescription className="text-xs">
+            Each dot is a model evaluated at its optimal threshold. The ideal point is top-right (high precision AND high recall).
+            Models in the top-right catch more fraud with fewer false alarms. There is always a trade-off — moving right (higher recall) typically lowers precision.
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={400}>
@@ -90,6 +94,7 @@ export default function AnalyticsPage() {
               <ZAxis range={[100, 100]} />
               <Tooltip
                 contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+                labelStyle={{ color: "#fafafa" }}
                 formatter={(value) => typeof value === "number" ? value.toFixed(4) : value}
               />
               <Scatter
@@ -120,7 +125,11 @@ export default function AnalyticsPage() {
       {/* Radar chart */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-sm font-medium">Model Metrics Radar</CardTitle>
+          <CardTitle className="text-sm font-medium">Model Metrics Radar — Multi-Dimensional Comparison</CardTitle>
+          <CardDescription className="text-xs">
+            Compares all models across five metrics simultaneously. A larger filled area means better overall performance.
+            No single metric tells the full story — this view reveals which model excels in which dimension.
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={400}>
@@ -156,6 +165,10 @@ export default function AnalyticsPage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-sm font-medium">Cross-Dataset F1 Comparison</CardTitle>
+          <CardDescription className="text-xs">
+            The same models evaluated on both datasets. A drop in F1 between datasets reveals how well each model generalises beyond its training domain.
+            Stable performance across Credit Card and PaySim indicates a robust, dataset-agnostic approach.
+          </CardDescription>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={300}>
@@ -174,6 +187,7 @@ export default function AnalyticsPage() {
                 <YAxis domain={[0, 1]} tick={{ fill: "#a1a1aa", fontSize: 11 }} />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+                  labelStyle={{ color: "#fafafa" }}
                   formatter={(value) => typeof value === "number" ? value.toFixed(4) : value}
                 />
                 <Legend wrapperStyle={{ fontSize: 11 }} />

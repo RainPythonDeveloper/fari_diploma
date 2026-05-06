@@ -4,7 +4,7 @@ import { useDataset } from "@/hooks/use-dataset";
 import { getModelResults, getConfusionMatrices, getHyperparameters, getShapValues } from "@/lib/data";
 import type { ModelResult, ConfusionMatrixData, Hyperparameter, ShapFeature } from "@/lib/types";
 import { MODEL_COLORS } from "@/lib/constants";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ConfusionMatrix } from "@/components/models/confusion-matrix";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
@@ -41,6 +41,13 @@ export default function ModelsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="text-sm font-medium">Model Performance Ranking</CardTitle>
+          <CardDescription className="text-xs">
+            Models are ranked by F1-Score — the primary metric for imbalanced fraud detection.
+            <span className="text-foreground"> Precision</span> = what fraction of fraud alerts were genuine.
+            <span className="text-foreground"> Recall</span> = what fraction of all real frauds were caught.
+            <span className="text-foreground"> ROC-AUC / PR-AUC</span> measure overall discriminative power across every possible threshold.
+            <span className="text-foreground"> TP</span> = caught fraud, <span className="text-foreground">FP</span> = false alarm, <span className="text-foreground">FN</span> = missed fraud.
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
@@ -91,7 +98,16 @@ export default function ModelsPage() {
       {/* Confusion Matrices */}
       {cm && (
         <div>
-          <h3 className="text-sm font-medium mb-4">Confusion Matrices</h3>
+          <div className="mb-4 space-y-1">
+            <h3 className="text-sm font-medium">Confusion Matrices</h3>
+            <p className="text-xs text-muted-foreground">
+              Each matrix shows how a model classified the test set.
+              <span className="text-foreground"> TN</span> = normal correctly cleared,
+              <span className="text-foreground"> TP</span> = fraud correctly caught,
+              <span className="text-foreground"> FP</span> = false alarm (normal blocked),
+              <span className="text-foreground"> FN</span> = missed fraud. In financial fraud detection, minimising FN (undetected fraud) is the highest priority.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {Object.entries(cm).map(([model, data]) => (
               <ConfusionMatrix key={model} model={model} data={data} />
@@ -105,6 +121,9 @@ export default function ModelsPage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-sm font-medium">Hyperparameters</CardTitle>
+            <CardDescription className="text-xs">
+              Key configuration values used to train each model. These were tuned via cross-validation to maximise F1-Score on the training set.
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <table className="w-full text-sm">
@@ -143,6 +162,7 @@ export default function ModelsPage() {
                 <YAxis type="category" dataKey="name" tick={{ fill: "#a1a1aa", fontSize: 10 }} width={90} />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+                  labelStyle={{ color: "#fafafa" }}
                   formatter={(v) => [typeof v === "number" ? v.toFixed(4) : "", "mean |SHAP|"]}
                 />
                 <Bar dataKey="mean_abs_shap" fill={MODEL_COLORS["XGBoost"] || "#3b82f6"} radius={[0, 4, 4, 0]} />

@@ -44,10 +44,15 @@ export default function DriftPage() {
       {/* Info banner */}
       <Card className="border-blue-500/20 bg-blue-500/5">
         <CardContent className="pt-4 pb-4">
-          <p className="text-sm font-medium text-foreground mb-1">Feature Discrimination Analysis</p>
+          <p className="text-sm font-medium text-foreground mb-1">Feature Discrimination Analysis — How Fraud Transactions Differ from Normal</p>
           <p className="text-xs text-muted-foreground">
-            Cohen&apos;s d measures how well each feature separates fraud from normal transactions.
-            |d| &gt; 0.8 = strong effect, 0.5–0.8 = medium, &lt; 0.5 = weak. High |d| features are most useful for detection.
+            To detect fraud, the models rely on features that behave differently in fraudulent vs. normal transactions.
+            This page quantifies that difference using <span className="text-foreground font-medium">Cohen&apos;s d</span> — a standardised effect size measuring how many standard deviations separate
+            the fraud and normal distributions for each feature.
+            <span className="text-foreground"> |d| &gt; 0.8</span> = strong discriminator (most useful for detection),
+            <span className="text-foreground"> 0.5–0.8</span> = medium effect,
+            <span className="text-foreground"> &lt; 0.5</span> = weak (little discriminative power).
+            Features with high |d| are the primary signals the XGBoost and ensemble models exploit.
           </p>
         </CardContent>
       </Card>
@@ -73,6 +78,10 @@ export default function DriftPage() {
       <Card>
         <CardHeader>
           <CardTitle className="text-sm font-medium">Top 15 Features by Effect Size (|Cohen&apos;s d|)</CardTitle>
+          <p className="text-xs text-muted-foreground mt-1">
+            Green bars = strong effect (|d| ≥ 0.8) — these features are the most powerful fraud signals and carry the highest weight in XGBoost.
+            The dashed reference lines mark the strong (0.8) and medium (0.5) effect thresholds.
+          </p>
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={400}>
@@ -81,6 +90,7 @@ export default function DriftPage() {
               <YAxis type="category" dataKey="name" tick={{ fill: "#a1a1aa", fontSize: 10 }} width={90} />
               <Tooltip
                 contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+                labelStyle={{ color: "#fafafa" }}
                 formatter={(v) => [typeof v === "number" ? v.toFixed(4) : "", "|Cohen's d|"]}
               />
               <ReferenceLine x={0.8} stroke="#f59e0b" strokeDasharray="4 3" label={{ value: "strong (0.8)", fill: "#f59e0b", fontSize: 9, position: "insideTopRight" }} />
