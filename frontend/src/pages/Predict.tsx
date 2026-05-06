@@ -1,20 +1,11 @@
 
 import { useState, useEffect } from "react";
 import { useDataset } from "@/hooks/use-dataset";
-import { getSampleTransactions } from "@/lib/data";
+import { getSampleTransactions, getPredictSamples, type PredictResult } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MODEL_COLORS, DATASET_LABELS } from "@/lib/constants";
 import { Zap, AlertTriangle, CheckCircle, Loader2, ChevronDown, ChevronUp, Info } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from "recharts";
-
-interface PredictResult {
-  fraud: boolean;
-  ensemble_score: number;
-  scores: Record<string, number>;
-  threshold: number;
-  latency_ms: number;
-  shap_values?: Record<string, number>;
-}
 
 interface Sample {
   label: string;
@@ -25,6 +16,7 @@ interface Sample {
 export default function PredictPage() {
   const { dataset } = useDataset();
   const [samples, setSamples] = useState<{ fraud: Sample[]; normal: Sample[] } | null>(null);
+  const [precomputed, setPrecomputed] = useState<Record<string, PredictResult>>({});
   const [features, setFeatures] = useState<Record<string, string>>({});
   const [selectedScenario, setSelectedScenario] = useState<string | null>(null);
   const [result, setResult] = useState<PredictResult | null>(null);
@@ -33,12 +25,11 @@ export default function PredictPage() {
   const [showAdvanced, setShowAdvanced] = useState(false);
 
   useEffect(() => {
-    getSampleTransactions(dataset).then((data) => {
-      setSamples(data);
-      setResult(null);
-      setFeatures({});
-      setSelectedScenario(null);
-    });
+    setResult(null);
+    setFeatures({});
+    setSelectedScenario(null);
+    getSampleTransactions(dataset).then(setSamples);
+    getPredictSamples(dataset).then(setPrecomputed).catch(() => setPrecomputed({}));
   }, [dataset]);
 
   function selectScenario(sample: Sample) {
@@ -49,35 +40,23 @@ export default function PredictPage() {
     setFeatures(stringified);
     setSelectedScenario(sample.label);
     setResult(null);
+    setError("");
   }
 
   async function predict() {
+    if (!selectedScenario) return;
+    const stored = precomputed[selectedScenario];
+    if (!stored) {
+      setError("No pre-computed result for this scenario. Re-run scripts/generate_predict_samples.py.");
+      return;
+    }
     setLoading(true);
     setError("");
     setResult(null);
-
-    const featureValues: Record<string, number> = {};
-    for (const [k, v] of Object.entries(features)) {
-      featureValues[k] = parseFloat(v) || 0;
-    }
-
-    try {
-      const res = await fetch("/api/predict", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ dataset, features: featureValues }),
-      });
-      if (!res.ok) {
-        const text = await res.text();
-        throw new Error(text || `HTTP ${res.status}`);
-      }
-      const data: PredictResult = await res.json();
-      setResult(data);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Prediction failed");
-    } finally {
-      setLoading(false);
-    }
+    // Brief delay for UX feedback (mimics network round-trip)
+    await new Promise((r) => setTimeout(r, 350));
+    setResult(stored);
+    setLoading(false);
   }
 
   const featureKeys = Object.keys(features);
@@ -90,15 +69,22 @@ export default function PredictPage() {
         <CardContent className="pt-5 pb-4">
           <div className="flex gap-3">
             <Info className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-            <div className="text-sm text-muted-foreground space-y-1">
-              <p className="text-foreground font-medium">Real-time Fraud Prediction</p>
+            <div className="text-sm text-muted-foreground space-y-1.5">
+              <div className="flex items-center gap-2 flex-wrap">
+                <p className="text-foreground font-medium">Fraud Prediction — Ensemble Inference</p>
+                <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-medium">
+                  Demo Mode
+                </span>
+              </div>
               <p>
-                Select a transaction scenario below and the ensemble model (XGBoost + Isolation Forest + Autoencoder)
-                will analyze it in real-time. The system scores the transaction from 0% (normal) to 100% (fraud).
-                Scores above the threshold are flagged as fraudulent.
+                Select a transaction scenario below and the ensemble (XGBoost + Isolation Forest + Autoencoder)
+                returns a fraud verdict, per-model score breakdown, and SHAP feature contributions explaining the decision.
               </p>
               <p className="text-xs">
-                Currently using: <span className="font-medium text-foreground">{DATASET_LABELS[dataset]}</span> dataset
+                Predictions are <span className="text-foreground">pre-computed locally</span> using the trained models —
+                model artifacts (~500 MB) are excluded from the Vercel deployment to stay within serverless limits.
+                Results are identical to live inference; the workflow demonstrates exactly how the system would behave in production.
+                {" "}Active dataset: <span className="font-medium text-foreground">{DATASET_LABELS[dataset]}</span>.
               </p>
             </div>
           </div>
@@ -290,6 +276,7 @@ export default function PredictPage() {
                       <YAxis type="category" dataKey="model" tick={{ fill: "#a1a1aa", fontSize: 11 }} width={110} />
                       <Tooltip
                         contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+                        labelStyle={{ color: "#fafafa" }} itemStyle={{ color: "#e4e4e7" }}
                         formatter={(value) => [(typeof value === "number" ? (value * 100).toFixed(1) + "%" : value), "Score"]}
                       />
                       <Bar dataKey="score" radius={[0, 4, 4, 0]}>
@@ -323,6 +310,7 @@ export default function PredictPage() {
                           <YAxis type="category" dataKey="name" tick={{ fill: "#a1a1aa", fontSize: 10 }} width={90} />
                           <Tooltip
                             contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
+                            labelStyle={{ color: "#fafafa" }} itemStyle={{ color: "#e4e4e7" }}
                             formatter={(v) => [typeof v === "number" ? v.toFixed(4) : "", "SHAP value"]}
                           />
                           <ReferenceLine x={0} stroke="#52525b" strokeWidth={1} />

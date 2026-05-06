@@ -46,7 +46,7 @@ export function RocChart({ data }: { data: RocCurveData }) {
             />
             <Tooltip
               contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
-              labelStyle={{ color: "#fafafa" }}
+              labelStyle={{ color: "#fafafa" }} itemStyle={{ color: "#e4e4e7" }}
             />
             <Legend wrapperStyle={{ fontSize: 11, paddingTop: 10 }} />
             {models.map((model) => (

@@ -162,7 +162,7 @@ export default function ModelsPage() {
                 <YAxis type="category" dataKey="name" tick={{ fill: "#a1a1aa", fontSize: 10 }} width={90} />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
-                  labelStyle={{ color: "#fafafa" }}
+                  labelStyle={{ color: "#fafafa" }} itemStyle={{ color: "#e4e4e7" }}
                   formatter={(v) => [typeof v === "number" ? v.toFixed(4) : "", "mean |SHAP|"]}
                 />
                 <Bar dataKey="mean_abs_shap" fill={MODEL_COLORS["XGBoost"] || "#3b82f6"} radius={[0, 4, 4, 0]} />

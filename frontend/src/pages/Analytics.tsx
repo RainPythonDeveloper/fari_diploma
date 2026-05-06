@@ -94,7 +94,7 @@ export default function AnalyticsPage() {
               <ZAxis range={[100, 100]} />
               <Tooltip
                 contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
-                labelStyle={{ color: "#fafafa" }}
+                labelStyle={{ color: "#fafafa" }} itemStyle={{ color: "#e4e4e7" }}
                 formatter={(value) => typeof value === "number" ? value.toFixed(4) : value}
               />
               <Scatter
@@ -187,7 +187,7 @@ export default function AnalyticsPage() {
                 <YAxis domain={[0, 1]} tick={{ fill: "#a1a1aa", fontSize: 11 }} />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
-                  labelStyle={{ color: "#fafafa" }}
+                  labelStyle={{ color: "#fafafa" }} itemStyle={{ color: "#e4e4e7" }}
                   formatter={(value) => typeof value === "number" ? value.toFixed(4) : value}
                 />
                 <Legend wrapperStyle={{ fontSize: 11 }} />

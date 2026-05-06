@@ -28,7 +28,7 @@ export function F1BarChart({ results }: { results: ModelResult[] }) {
             <YAxis type="category" dataKey="model" tick={{ fill: "#a1a1aa", fontSize: 12 }} width={120} />
             <Tooltip
               contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
-              labelStyle={{ color: "#fafafa" }}
+              labelStyle={{ color: "#fafafa" }} itemStyle={{ color: "#e4e4e7" }}
               formatter={(value) => [typeof value === "number" ? value.toFixed(4) : value, "F1"]}
             />
             <Bar dataKey="f1" radius={[0, 4, 4, 0]}>

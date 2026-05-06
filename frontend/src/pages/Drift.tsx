@@ -90,7 +90,7 @@ export default function DriftPage() {
               <YAxis type="category" dataKey="name" tick={{ fill: "#a1a1aa", fontSize: 10 }} width={90} />
               <Tooltip
                 contentStyle={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: 8 }}
-                labelStyle={{ color: "#fafafa" }}
+                labelStyle={{ color: "#fafafa" }} itemStyle={{ color: "#e4e4e7" }}
                 formatter={(v) => [typeof v === "number" ? v.toFixed(4) : "", "|Cohen's d|"]}
               />
               <ReferenceLine x={0.8} stroke="#f59e0b" strokeDasharray="4 3" label={{ value: "strong (0.8)", fill: "#f59e0b", fontSize: 9, position: "insideTopRight" }} />

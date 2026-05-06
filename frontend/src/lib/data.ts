@@ -81,6 +81,19 @@ export async function getSampleTransactions(dataset: DatasetKey) {
   }>(`/data/${dataset}/sample_transactions.json`);
 }
 
+export interface PredictResult {
+  fraud: boolean;
+  ensemble_score: number;
+  scores: Record<string, number>;
+  threshold: number;
+  latency_ms: number;
+  shap_values?: Record<string, number>;
+}
+
+export async function getPredictSamples(dataset: DatasetKey) {
+  return fetchJson<Record<string, PredictResult>>(`/data/${dataset}/predict_samples.json`);
+}
+
 export async function getCombinedComparison(): Promise<(ModelResult & { dataset: string })[]> {
   return fetchJson(`/data/combined/comparison.json`);
 }
