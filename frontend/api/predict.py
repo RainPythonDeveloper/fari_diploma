@@ -1,7 +1,15 @@
 """
-Vercel Python Serverless Function for real-time fraud prediction.
+Vercel Python Serverless Function for real-time fraud prediction (NEW ENSEMBLE).
 POST /api/predict
 Body: { "dataset": "creditcard"|"paysim", "features": { "V1": ..., ... } }
+
+Ensemble = mean of min-max normalized scores from XGBoost + Isolation Forest + Autoencoder.
+Each model's training-time score range is stored in models/ensemble_{tag}.json so
+single-sample inference can replicate the same normalization used at training.
+
+Two scalers per dataset:
+  - scaler_sup_{tag}.pkl  -> applied to XGBoost input
+  - scaler_unsup_{tag}.pkl -> applied to Isolation Forest + Autoencoder input
 """
 
 import json
@@ -11,12 +19,10 @@ import numpy as np
 
 from http.server import BaseHTTPRequestHandler
 
-# Lazy-load models to avoid cold start overhead on every import
 _models = {}
 
 
 def _get_models_dir():
-    """Find models directory."""
     candidates = [
         os.path.join(os.path.dirname(__file__), "..", "models"),
         os.path.join(os.path.dirname(__file__), "..", "..", "models"),
@@ -29,7 +35,6 @@ def _get_models_dir():
 
 
 def _load_model(dataset_tag):
-    """Load and cache models for a dataset."""
     if dataset_tag in _models:
         return _models[dataset_tag]
 
@@ -38,24 +43,20 @@ def _load_model(dataset_tag):
     import joblib
     import xgboost as xgb
 
-    # Load scaler
-    scaler = joblib.load(os.path.join(models_dir, f"scaler_{dataset_tag}.pkl"))
+    scaler_sup = joblib.load(os.path.join(models_dir, f"scaler_sup_{dataset_tag}.pkl"))
+    scaler_unsup = joblib.load(os.path.join(models_dir, f"scaler_unsup_{dataset_tag}.pkl"))
 
-    # Load XGBoost
     xgb_model = xgb.XGBClassifier()
     xgb_model.load_model(os.path.join(models_dir, f"xgboost_{dataset_tag}.json"))
 
-    # Load Isolation Forest
     iforest = joblib.load(os.path.join(models_dir, f"iforest_{dataset_tag}.pkl"))
 
-    # Load ensemble config
     with open(os.path.join(models_dir, f"ensemble_{dataset_tag}.json")) as f:
         ensemble_config = json.load(f)
 
-    # Try to load autoencoder (ONNX)
     ae_session = None
     ae_input_name = None
-    ae_threshold = 0
+    ae_threshold = 0.0
     try:
         import onnxruntime as ort
         onnx_path = os.path.join(models_dir, f"autoencoder_{dataset_tag}.onnx")
@@ -69,7 +70,8 @@ def _load_model(dataset_tag):
         pass
 
     result = {
-        "scaler": scaler,
+        "scaler_sup": scaler_sup,
+        "scaler_unsup": scaler_unsup,
         "xgboost": xgb_model,
         "iforest": iforest,
         "ae_session": ae_session,
@@ -81,55 +83,58 @@ def _load_model(dataset_tag):
     return result
 
 
+def _norm(value, rng):
+    span = rng["max"] - rng["min"]
+    if span <= 0:
+        return 0.0
+    out = (value - rng["min"]) / span
+    return max(0.0, min(1.0, out))
+
+
 def predict(dataset_tag, features_dict):
-    """Run ensemble prediction on a single transaction."""
+    """Run new-logic ensemble prediction on a single transaction."""
     start = time.time()
 
     m = _load_model(dataset_tag)
-    scaler = m["scaler"]
+    scaler_sup = m["scaler_sup"]
+    scaler_unsup = m["scaler_unsup"]
     ensemble_config = m["ensemble_config"]
-    weights = ensemble_config["weights"]
 
-    # Build feature array in correct order
-    feature_names = scaler.feature_names_in_
+    # Build feature array in correct order (both scalers were fit on the same feature set)
+    feature_names = scaler_sup.feature_names_in_
     values = np.array([[features_dict.get(f, 0.0) for f in feature_names]], dtype=np.float64)
-    scaled = scaler.transform(values)
 
-    # XGBoost score
-    xgb_prob = float(m["xgboost"].predict_proba(scaled)[0, 1])
+    scaled_sup = scaler_sup.transform(values)
+    scaled_unsup = scaler_unsup.transform(values)
 
-    # Per-transaction SHAP via XGBoost built-in (no extra packages)
+    # XGBoost (supervised) -> raw probability
+    xgb_prob = float(m["xgboost"].predict_proba(scaled_sup)[0, 1])
+
+    # Per-transaction SHAP via XGBoost built-in
     import xgboost as xgb
-    dmatrix = xgb.DMatrix(scaled, feature_names=list(feature_names))
+    dmatrix = xgb.DMatrix(scaled_sup, feature_names=list(feature_names))
     contribs = m["xgboost"].get_booster().predict(dmatrix, pred_contribs=True)
     shap_dict = {
         str(feature_names[i]): round(float(contribs[0][i]), 4)
         for i in range(len(feature_names))
     }
 
-    # Isolation Forest score
-    if_score = float(-m["iforest"].decision_function(scaled)[0])
-    if_range = ensemble_config["iforest_score_range"]
-    if_norm = (if_score - if_range["min"]) / (if_range["max"] - if_range["min"] + 1e-10)
-    if_norm = max(0, min(1, if_norm))
+    # Isolation Forest (unsupervised) -> negated decision function
+    if_score = float(-m["iforest"].decision_function(scaled_unsup)[0])
 
-    # Autoencoder score
-    ae_norm = 0.0
-    ae_raw = 0.0
+    # Autoencoder (unsupervised) -> reconstruction error
+    ae_score = 0.0
     if m["ae_session"] is not None:
-        recon = m["ae_session"].run(None, {m["ae_input_name"]: scaled.astype(np.float32)})[0]
-        ae_raw = float(np.mean(np.square(scaled - recon)))
-        ae_range = ensemble_config["ae_score_range"]
-        ae_norm = (ae_raw - ae_range["min"]) / (ae_range["max"] - ae_range["min"] + 1e-10)
-        ae_norm = max(0, min(1, ae_norm))
+        recon = m["ae_session"].run(None, {m["ae_input_name"]: scaled_unsup.astype(np.float32)})[0]
+        ae_score = float(np.mean(np.square(scaled_unsup - recon)))
 
-    # Ensemble
-    ensemble_score = (
-        weights["xgboost"] * xgb_prob +
-        weights["isolation_forest"] * if_norm +
-        weights["autoencoder"] * ae_norm
-    )
+    # Apply training-time min-max normalization to each raw score
+    xgb_norm = _norm(xgb_prob, ensemble_config["xgb_score_range"])
+    if_norm = _norm(if_score, ensemble_config["iforest_score_range"])
+    ae_norm = _norm(ae_score, ensemble_config["ae_score_range"])
 
+    # Ensemble = simple mean
+    ensemble_score = (xgb_norm + if_norm + ae_norm) / 3.0
     threshold = ensemble_config["threshold"]
     is_fraud = ensemble_score >= threshold
 
@@ -139,9 +144,14 @@ def predict(dataset_tag, features_dict):
         "fraud": bool(is_fraud),
         "ensemble_score": round(float(ensemble_score), 4),
         "scores": {
+            "XGBoost": round(xgb_norm, 4),
+            "Isolation Forest": round(if_norm, 4),
+            "Autoencoder": round(ae_norm, 4),
+        },
+        "raw_scores": {
             "XGBoost": round(xgb_prob, 4),
-            "Isolation Forest": round(float(if_norm), 4),
-            "Autoencoder": round(float(ae_norm), 4),
+            "Isolation Forest": round(if_score, 4),
+            "Autoencoder": round(ae_score, 4),
         },
         "threshold": round(float(threshold), 4),
         "latency_ms": latency_ms,
