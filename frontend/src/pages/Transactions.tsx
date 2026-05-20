@@ -105,9 +105,9 @@ export default function TransactionsPage() {
         />
         <MiniStat
           icon={ShieldCheck}
-          label="Detection Rate"
+          label="Sample Detection Rate"
           value={`${detectionRate}%`}
-          sub="of fraud correctly flagged"
+          sub="curated sample — see Models page for full test-set Ensemble recall"
           color="text-emerald-500"
         />
         <MiniStat

@@ -166,8 +166,8 @@ export default function AnalyticsPage() {
           <CardHeader>
             <CardTitle className="text-sm font-medium">Cross-Dataset F1 Comparison</CardTitle>
           <CardDescription className="text-xs">
-            The same models evaluated on both datasets. A drop in F1 between datasets reveals how well each model generalises beyond its training domain.
-            Stable performance across Credit Card and PaySim indicates a robust, dataset-agnostic approach.
+            The same models evaluated on both datasets. F1 varies between datasets because Credit Card (PCA-anonymised, ~0.17% fraud) and PaySim (synthetic, ~1.6% fraud) have different feature signals and class balance.
+            A smaller gap between bars suggests the model adapts to both domains.
           </CardDescription>
           </CardHeader>
           <CardContent>

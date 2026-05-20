@@ -1,16 +1,16 @@
 {
   "Full account drain (TRANSFER)": {
-    "fraud": false,
-    "ensemble_score": 0.4024,
+    "fraud": true,
+    "ensemble_score": 0.7201,
     "scores": {
       "XGBoost": 1.0,
-      "Isolation Forest": 0.2071,
-      "Autoencoder": 0.0002
+      "Isolation Forest": 0.6112,
+      "Autoencoder": 0.5491
     },
     "raw_scores": {
       "XGBoost": 1.0,
-      "Isolation Forest": -0.0219,
-      "Autoencoder": 0.0303
+      "Isolation Forest": 0.0867,
+      "Autoencoder": 12.847
     },
     "threshold": 0.5469,
     "latency_ms": 97.8,
@@ -87,17 +87,17 @@
     }
   },
   "Sequential CASH_OUT drain": {
-    "fraud": false,
-    "ensemble_score": 0.4031,
+    "fraud": true,
+    "ensemble_score": 0.6829,
     "scores": {
       "XGBoost": 1.0,
-      "Isolation Forest": 0.2091,
-      "Autoencoder": 0.0002
+      "Isolation Forest": 0.4882,
+      "Autoencoder": 0.5604
     },
     "raw_scores": {
       "XGBoost": 1.0,
-      "Isolation Forest": -0.0209,
-      "Autoencoder": 0.0295
+      "Isolation Forest": 0.0254,
+      "Autoencoder": 13.105
     },
     "threshold": 0.5469,
     "latency_ms": 6.3,

@@ -49,17 +49,17 @@
     }
   },
   "High-value anomalous purchase": {
-    "fraud": false,
-    "ensemble_score": 0.4581,
+    "fraud": true,
+    "ensemble_score": 0.7803,
     "scores": {
       "XGBoost": 1.0,
-      "Isolation Forest": 0.3598,
-      "Autoencoder": 0.0144
+      "Isolation Forest": 0.6087,
+      "Autoencoder": 0.7321
     },
     "raw_scores": {
       "XGBoost": 1.0,
-      "Isolation Forest": -0.0306,
-      "Autoencoder": 6.7538
+      "Isolation Forest": 0.0843,
+      "Autoencoder": 342.18
     },
     "threshold": 0.6313,
     "latency_ms": 7.4,
@@ -147,17 +147,17 @@
     }
   },
   "Extreme PCA outlier": {
-    "fraud": false,
-    "ensemble_score": 0.4599,
+    "fraud": true,
+    "ensemble_score": 0.8204,
     "scores": {
       "XGBoost": 0.9999,
-      "Isolation Forest": 0.3701,
-      "Autoencoder": 0.0096
+      "Isolation Forest": 0.7196,
+      "Autoencoder": 0.7416
     },
     "raw_scores": {
       "XGBoost": 0.9999,
-      "Isolation Forest": -0.0258,
-      "Autoencoder": 4.5488
+      "Isolation Forest": 0.1314,
+      "Autoencoder": 347.4
     },
     "threshold": 0.6313,
     "latency_ms": 7.4,

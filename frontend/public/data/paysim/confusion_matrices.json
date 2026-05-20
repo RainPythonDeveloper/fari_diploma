@@ -1,1 +1,1 @@
-{"XGBoost": {"tn": 98329, "fp": 28, "fn": 7, "tp": 1636}, "Isolation Forest": {"tn": 96776, "fp": 1582, "fn": 4122, "tp": 4091}, "Autoencoder": {"tn": 96745, "fp": 1613, "fn": 3019, "tp": 5194}, "Ensemble": {"tn": 98358, "fp": 0, "fn": 6462, "tp": 1751}}
+{"XGBoost": {"tp": 6850, "fp": 821, "tn": 97537, "fn": 1363}, "Autoencoder": {"tp": 4911, "fp": 4515, "tn": 93843, "fn": 3302}, "Isolation Forest": {"tp": 4607, "fp": 4872, "tn": 93486, "fn": 3606}, "Ensemble": {"tp": 1979, "fp": 115, "tn": 98243, "fn": 6234}}
