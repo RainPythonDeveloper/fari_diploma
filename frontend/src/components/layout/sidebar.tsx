@@ -25,7 +25,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
             <Shield className="w-5 h-5 text-emerald-500" />
           </div>
           <div>
-            <h1 className="font-semibold text-sm">Fraud Detection</h1>
+            <h1 className="font-semibold text-sm">QarzhyAnomaly</h1>
             <p className="text-xs text-muted-foreground">ML Dashboard</p>
           </div>
         </div>
