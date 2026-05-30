@@ -30,12 +30,12 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       {/* Project overview */}
-      <Card className="border-emerald-500/20 bg-emerald-500/5">
+      <Card className="border-emerald-500/40 bg-emerald-500/10">
         <CardContent className="pt-5 pb-4">
           <div className="flex gap-3">
-            <Shield className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+            <Shield className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
             <div className="space-y-1.5">
-              <p className="text-sm font-semibold text-foreground">QarzhyAnomaly — Anomaly Detection in Financial Transactions · Diploma Project</p>
+              <p className="text-sm font-semibold text-foreground">QarzhyAnomaly — Anomaly Detection in Financial Transactions</p>
               <p className="text-xs text-muted-foreground">
                 The system detects fraudulent financial transactions by combining three complementary ML models into a weighted ensemble:
                 {" "}<span className="text-foreground font-medium">XGBoost</span> (supervised gradient boosting — learns explicit fraud patterns from labeled training data),

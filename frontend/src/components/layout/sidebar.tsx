@@ -59,9 +59,6 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
 
       <div className="p-4 border-t border-border">
         <p className="text-xs text-muted-foreground">
-          Diploma Project — 2025
-        </p>
-        <p className="text-xs text-muted-foreground">
           Anomaly Detection in Financial Transactions
         </p>
       </div>

@@ -65,10 +65,10 @@ export default function PredictPage() {
   return (
     <div className="space-y-6">
       {/* Intro */}
-      <Card className="border-blue-500/20 bg-blue-500/5">
+      <Card className="border-blue-500/40 bg-blue-500/10">
         <CardContent className="pt-5 pb-4">
           <div className="flex gap-3">
-            <Info className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+            <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
             <div className="text-sm text-muted-foreground space-y-1.5">
               <div className="flex items-center gap-2 flex-wrap">
                 <p className="text-foreground font-medium">Fraud Prediction — Ensemble Inference</p>

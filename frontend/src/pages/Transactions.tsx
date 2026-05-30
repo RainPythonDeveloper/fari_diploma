@@ -65,10 +65,10 @@ export default function TransactionsPage() {
   return (
     <div className="space-y-4">
       {/* Intro */}
-      <Card className="border-blue-500/20 bg-blue-500/5">
+      <Card className="border-blue-500/40 bg-blue-500/10">
         <CardContent className="pt-4 pb-4">
           <div className="flex gap-3">
-            <Info className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+            <Info className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
             <div className="text-xs text-muted-foreground space-y-1">
               <p className="text-sm font-medium text-foreground">Transaction-Level Fraud Scoring</p>
               <p>

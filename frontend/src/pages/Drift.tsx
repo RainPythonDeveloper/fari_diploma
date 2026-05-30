@@ -42,7 +42,7 @@ export default function DriftPage() {
   return (
     <div className="space-y-6">
       {/* Info banner */}
-      <Card className="border-blue-500/20 bg-blue-500/5">
+      <Card className="border-blue-500/40 bg-blue-500/10">
         <CardContent className="pt-4 pb-4">
           <p className="text-sm font-medium text-foreground mb-1">Feature Discrimination Analysis — How Fraud Transactions Differ from Normal</p>
           <p className="text-xs text-muted-foreground">
